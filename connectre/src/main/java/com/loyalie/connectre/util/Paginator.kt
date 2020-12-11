@@ -13,7 +13,7 @@ import com.loyalie.connectre.R
 import kotlinx.android.synthetic.main.loader_horizonta_scroll.view.*
 import kotlinx.android.synthetic.main.loader_item.view.*
 
-const val PAGINATOR_ITEMS_PER_PAGE = 3
+const val PAGINATOR_ITEMS_PER_PAGE = 20
 abstract class PaginatingScrollListener(
     var linearLayoutManager: LinearLayoutManager? = null,
     var gridLayoutManager: GridLayoutManager? = null,

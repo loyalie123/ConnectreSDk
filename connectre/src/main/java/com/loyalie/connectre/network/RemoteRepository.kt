@@ -270,13 +270,13 @@ class RemoteRepository @Inject constructor(
 
     fun getMilestone(soNo:String,page: Int,userId:Int)=
         ConnectReApp.networkService.getMilestone(/*,soNo, */userId,soNo, page,
-            PAGINATOR_ITEMS_PER_PAGE)
+            100000)
     fun getDemands(soNo:String,page: Int,userId:Int)=
         ConnectReApp.networkService.getDemands(/*preferenceStorage.userId.toInt(),soNo, */ userId,soNo,page,
-            PAGINATOR_ITEMS_PER_PAGE)
+            100000)
     fun getReceipts(soNo:String,page: Int,userId:Int)=
         ConnectReApp.networkService.getReciepts(/*preferenceStorage.userId.toInt(),soNo, */userId,soNo, page,
-            PAGINATOR_ITEMS_PER_PAGE)
+            100000)
     fun getOverview(soNo: Int,userId:Int)=
         ConnectReApp.networkService.getOverview(/*,, */userId,soNo)
 
