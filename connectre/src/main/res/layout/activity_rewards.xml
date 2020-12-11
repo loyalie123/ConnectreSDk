@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		tools:context=".ui.rewards.RewardsActivity">
+
+	<include
+			android:id="@+id/rewardToolbar"
+			layout="@layout/center_title_toolbar" />
+
+
+	<com.loyalie.connectre.util.CustomTabLayout
+			android:id="@+id/tab_layout"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:background="#71339D"
+			android:visibility="visible"
+			app:ddAnimatedIndicator="dachshund"
+			app:ddIndicatorColor="@android:color/white"
+			app:ddIndicatorHeight="10dp"
+			app:tabMode="fixed"
+			app:tabSelectedTextColor="@android:color/white"
+			app:tabTextAppearance="@style/TabLayoutTextAppearance"
+			app:tabTextColor="#80ffffff" />
+
+	<androidx.viewpager.widget.ViewPager
+			android:id="@+id/rewardsVP"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent" />
+
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="180dp"
+
+		android:layout_marginStart="20dp"
+
+		android:layout_marginTop="20dp"
+		android:layout_marginEnd="20dp"
+		android:background="@drawable/grey_outline_curved"
+		android:foreground="?android:attr/selectableItemBackground"
+		android:orientation="vertical">
+
+	<!--<ImageView android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:id="@+id/devBgIV"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			android:scaleType="centerCrop"
+			app:layout_constraintEnd_toStartOf="@id/devLogoIV"
+			app:layout_ constraintHorizontal_weight="0.6"
+android:visibility="gone"
+			app:layout_constraintBottom_toBottomOf="parent"/>
+<ImageView
+		android:layout_width="0dp"
+	android:layout_height="0dp"
+		android:id="@+id/overlayIV"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@id/devBgIV"
+		android:scaleType="centerCrop"
+		android:visibility="gone"
+		app:layout_constraintEnd_toStartOf="@id/devLogoIV"
+		app:layout_constraintHorizontal_weight="0.6"
+		android:src="@color/blackAlphaFg"
+		app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+	<ImageView
+			android:id="@+id/devLogoIV"
+			android:layout_width="120dp"
+			android:layout_height="120dp"
+			android:layout_marginStart="15dp"
+			android:layout_marginTop="15dp"
+			android:layout_marginEnd="15dp"
+			android:adjustViewBounds="true"
+			android:scaleType="centerCrop"
+			android:src="@drawable/default_vendor"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+			android:id="@+id/nameTv"
+			style="@style/UbuntuBoldText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="15dp"
+			android:layout_marginTop="15dp"
+			android:layout_marginEnd="15dp"
+			android:ellipsize="end"
+			android:lineSpacingExtra="4dp"
+
+			android:maxLines="1"
+			android:paddingBottom="5dp"
+			android:text="Shapoorji pallonji real estate"
+			android:textColor="@color/black"
+			android:textSize="12sp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/devLogoIV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

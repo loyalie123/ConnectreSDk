@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".ui.feedback.FeedbackActivity">
+
+	<include
+			android:id="@+id/feedbackToolbar"
+			layout="@layout/center_title_toolbar" />
+
+	<ScrollView
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:clipToPadding="false"
+			android:paddingBottom="20dp"
+			app:layout_constraintBottom_toTopOf="@id/submitBtn"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/feedbackToolbar">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<androidx.cardview.widget.CardView
+					android:id="@+id/topCV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="20dp"
+					app:cardBackgroundColor="@color/white"
+					app:cardCornerRadius="2dp"
+					app:cardElevation="2dp"
+					app:cardPreventCornerOverlap="false"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent">
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+					<androidx.appcompat.widget.AppCompatImageView
+							android:id="@+id/ratingDemoIV"
+							android:layout_width="53dp"
+							android:layout_height="53dp"
+							android:layout_marginTop="35dp"
+							android:src="@drawable/ic_rating_demo"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toTopOf="parent" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/rateInfoTV"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="20dp"
+							android:text="@string/please_rate_your_experience"
+							android:textColor="@color/textColorGrey"
+							app:fontFamily="@font/sinkinsans_500medium"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/ratingDemoIV" />
+
+					<RatingBar
+							android:id="@+id/feedbackRB"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="15dp"
+							android:numStars="5"
+							android:rating="5"
+							android:stepSize="1"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/rateInfoTV" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/feedbackTV"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="20dp"
+							android:paddingBottom="25dp"
+							android:text="Very Good"
+							android:textColor="@color/textColorGreyAlpha40"
+							android:textSize="14sp"
+							app:fontFamily="@font/sinkinsans_400regular"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/feedbackRB" />
+
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+			</androidx.cardview.widget.CardView>
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/feedbackLabelTV"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="10dp"
+					android:layout_marginTop="40dp"
+					android:layout_marginEnd="10dp"
+					android:text="@string/please_share_your_feedback_about_the_developer"
+					android:textColor="@color/textColorGrey"
+					android:textSize="12sp"
+					app:fontFamily="@font/sinkinsans_500medium"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/topCV" />
+
+			<androidx.appcompat.widget.AppCompatEditText
+					android:id="@+id/feedbackET"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="15dp"
+					android:layout_marginTop="15dp"
+					android:layout_marginEnd="15dp"
+					android:background="@drawable/grey_bg_rect"
+					android:focusable="true"
+					android:gravity="top"
+					android:inputType="textMultiLine"
+					android:maxLength="498"
+					android:minHeight="100dp"
+					android:padding="8dp"
+					android:textSize="12sp"
+					android:theme="@style/EditTextTheme"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/feedbackLabelTV" />
+
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</ScrollView>
+
+
+	<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/submitBtn"
+			android:layout_width="0dp"
+			android:layout_height="50dp"
+			android:layout_marginTop="100dp"
+			android:background="#662d92"
+			android:foreground="?android:attr/selectableItemBackground"
+			android:text="@string/submit"
+			android:textAllCaps="false"
+			android:textColor="@color/white"
+			android:textSize="14sp"
+			app:fontFamily="@font/sinkinsans_700bold"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

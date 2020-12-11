@@ -1,0 +1,3 @@
+include ':connectre'
+include ':app'
+rootProject.name = "ConnectreSDk"

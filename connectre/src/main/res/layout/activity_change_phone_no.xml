@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.change_password.ChangePhoneNoActivity">
+
+    <include
+        android:id="@+id/changePasswordToolbar"
+        layout="@layout/center_title_toolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changePasswordToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/changePhoneLabelTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:letterSpacing="0.01"
+                android:text="@string/please_enter_your_new_mobile_number"
+                android:textColor="@color/textColorGreyAlpha70"
+                android:textSize="14sp"
+                app:fontFamily="@font/sinkinsans_400regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                android:id="@+id/countryCodeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/editetxt_grey_line"
+                android:gravity="center"
+                android:minWidth="20dp"
+                android:padding="5dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:theme="@style/EditTextTheme"
+                app:ccp_defaultCode="91"
+                app:ccp_hideNameCode="true"
+                app:ccp_showFlag="false"
+                app:ccp_textColor="@color/black"
+                app:ccp_textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/verticalView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/changePhoneLabelTV" />
+
+            <View
+                android:id="@+id/verticalView"
+                android:layout_width="0.5dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="35dp"
+                android:background="@color/greyHint"
+                app:layout_constraintEnd_toStartOf="@+id/mobileNumET"
+                app:layout_constraintStart_toEndOf="@+id/countryCodeTV"
+                app:layout_constraintTop_toBottomOf="@id/changePhoneLabelTV" />
+
+            <EditText
+                android:id="@+id/mobileNumET"
+                style="@style/BasicText"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/editetxt_grey_line"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+
+                android:paddingStart="36dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="@color/greyHint"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/verticalView"
+                app:layout_constraintTop_toBottomOf="@id/changePhoneLabelTV" />
+
+            <!--<TextView
+                    style="@style/BasicText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/mobileNumET"
+                    app:layout_constraintStart_toStartOf="@id/mobileNumET"
+                    app:layout_constraintTop_toTopOf="@id/mobileNumET" />
+        --><androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/changeemailLabelTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:letterSpacing="0.01"
+            android:text="Please Enter Your New Email Address"
+            android:textColor="@color/textColorGreyAlpha70"
+            android:textSize="14sp"
+            app:fontFamily="@font/sinkinsans_400regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobileNumET" />
+
+            <EditText
+                android:id="@+id/emailET"
+                style="@style/BasicText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/editetxt_grey_line"
+                android:fontFamily="@font/sinkinsans_400regular"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                android:textColorHint="@color/greyHint"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/changeemailLabelTV" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitBtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:background="#662d92"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:fontFamily="@font/sinkinsans_700bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

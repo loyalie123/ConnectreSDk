@@ -1,0 +1,144 @@
+<resources>
+
+	<!-- Base application theme. -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:windowBackground">@color/white</item>
+
+	</style>
+
+
+	<style name="AppTheme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="colorPrimaryDark">@color/black</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowTranslucentNavigation">true</item>
+		<item name="android:windowTranslucentStatus">true</item>
+		<item name="android:statusBarColor">@color/black</item>
+
+	</style>
+
+	<style name="AppTheme.LightStatusbar">
+		<item name="colorPrimaryDark">@color/colorAccent</item>
+	</style>
+
+	<style name="BasicText" parent="UbuntuText">
+		<item name="android:textColor">@color/textColorDark</item>
+	</style>
+
+	<style name="WhiteText" parent="UbuntuText">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="UbuntuText" parent="@android:style/TextAppearance.Medium">
+		<item name="android:fontFamily">@font/sinkinsans_400regular</item>
+	</style>
+
+	<style name="UbuntuMediumText" parent="@android:style/TextAppearance.Medium">
+		<item name="android:fontFamily">@font/sinkinsans_500medium</item>
+	</style>
+
+	<style name="UbuntuBoldText" parent="@android:style/TextAppearance.Medium">
+		<item name="android:fontFamily">@font/sinkinsans_700bold</item>
+	</style>
+
+
+	<style name="TabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+		<item name="android:textSize">14sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:inputType">textCapWords</item>
+		<item name="android:fontFamily">@font/sinkinsans_400regular</item>
+	</style>
+
+	<style name="VenueTablayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+		<item name="android:textSize">13sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="android:inputType">textCapWords</item>
+		<item name="android:fontFamily">@font/sinkinsans_500medium</item>
+	</style>
+
+	<style name="EditTextTheme">
+		<item name="colorControlNormal">@color/lightGrey</item>
+		<item name="colorControlActivated">#b8b8b8</item>
+		<item name="colorControlHighlight">@color/lightGrey</item>
+	</style>
+
+
+	<style name="customCalender" parent="Theme.AppCompat.Light.Dialog">
+		<item name="colorPrimary">@color/colorPrimaryCalender</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDarkCalender</item>
+		<item name="colorAccent">@color/colorAccentCalender</item>
+	</style>
+
+	<style name="editCommonText">
+		<item name="colorControlNormal">#FF303E47</item>
+		<item name="colorControlActivated">#b8b8b8</item>
+		<item name="colorControlHighlight">#FF303E47</item>
+
+
+	</style>
+
+	<style name="AppTheme.Transparent" parent="AppTheme">
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+		<item name="colorPrimaryDark">@android:color/transparent</item>
+		<item name="colorPrimary">@android:color/transparent</item>
+
+	</style>
+
+	<style name="Theme.Transparent1" parent="AppTheme">
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:statusBarColor">@android:color/black</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="colorPrimaryDark">@color/green_grey_selector</item>
+		<item name="colorPrimary">@color/green_grey_selector</item>
+
+	</style>
+
+	<style name="spinner">
+		<item name="android:textSize">14sp</item>
+		<item name="android:fontFamily">@font/sinkinsans_500medium</item>
+		<item name="android:textColorHint">@color/pinkish_grey</item>
+		<item name="android:textColor">@color/black</item>
+
+	</style>
+
+	<style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+		<item name="colorPrimary">@color/charcoal_grey</item>
+		<item name="colorPrimaryDark">@color/charcoal_grey</item>
+		<item name="colorAccent">@color/charcoal_grey</item>
+		<item name="borderlessButtonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+		<item name="android:fontFamily">@font/sinkinsans_500medium</item>
+		<item name="android:textSize">13sp</item>
+		<item name="android:textColor">@color/charcoal_grey</item>
+		<item name="android:windowTitleStyle">@style/DialogTitle</item>
+	</style>
+
+	<style name="DialogTitle" parent="TextAppearance.AppCompat.Large">
+		<item name="android:textSize">16sp</item>
+		<item name="android:fontFamily">@font/sinkinsans_700bold</item>
+		<item name="android:gravity">center</item>
+	</style>
+
+	<style name="AppTheme.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+	<style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+		<item name="android:textSize">9sp</item>
+		<item name="android:textColor">#909090</item>
+		<item name="android:textStyle">normal</item>
+		<item name="textAllCaps">false</item>
+		<item name="android:fontFamily">@font/sinkinsans_400regular</item>
+	</style>
+
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/offerClaimedCL"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:id="@+id/offerClaimedIV"
+				android:layout_width="68dp"
+				android:layout_height="68dp"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="10dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/topView"
+				app:srcCompat="@drawable/claimed_bg" />
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:layout_width="22dp"
+				android:layout_height="26dp"
+				app:layout_constraintBottom_toBottomOf="@+id/offerClaimedIV"
+				app:layout_constraintEnd_toEndOf="@+id/offerClaimedIV"
+				app:layout_constraintStart_toStartOf="@+id/offerClaimedIV"
+				app:layout_constraintTop_toTopOf="@+id/offerClaimedIV"
+				app:srcCompat="@drawable/ic_tick_black" />
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="14dp"
+				android:layout_marginEnd="20dp"
+				android:background="#f4f4f4"
+				android:minHeight="80dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@id/offerClaimedIV"
+				app:layout_constraintTop_toBottomOf="@+id/topView">
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/claimedTV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="15dp"
+					android:layout_marginTop="15dp"
+					android:letterSpacing="0.01"
+					android:text="@string/claimed"
+					android:textColor="@color/textColorGreyAlpha70"
+					android:textSize="13sp"
+					app:fontFamily="@font/sinkinsans_500medium"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/titleTV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="15dp"
+					android:layout_marginTop="8dp"
+					android:text="Le Lorem Ipsum est "
+					android:textColor="@color/textColorGrey"
+					android:textSize="10sp"
+					app:fontFamily="@font/sinkinsans_400regular"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/claimedTV" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/viewClaimDetailsTV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="19dp"
+					android:layout_marginEnd="15dp"
+					android:text="@string/view_details"
+					android:textColor="@color/textColorGreyAlpha30"
+					android:textSize="9sp"
+					app:fontFamily="@font/sinkinsans_500medium"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<View
+				android:id="@+id/topView"
+				android:layout_width="0.5dp"
+				android:layout_height="0dp"
+				android:layout_marginStart="52dp"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/vertical_line"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+
+				/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<include
+			android:id="@+id/offerEligibleCL"
+			layout="@layout/offer_type_eligible_tem"
+			android:visibility="gone"
+			app:layout_constraintStart_toStartOf="parent" />
+
+	<include
+			android:id="@+id/offerReferCL"
+			layout="@layout/offer_type_refer"
+			android:visibility="gone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">Club Benefique</string>
+    <string name="let_s_get_started">Let’s Get Started</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="continue_">Continue</string>
+    <string name="by_signing_in_you_agree_to_the_terms">By signing in, you agree to the \n Terms of Use &amp; Privacy
+		Policy
+	</string>
+    <string name="verify_mobile">Verify Your Mobile</string>
+    <string name="enter_the_otp_send_to">Enter the OTP sent to </string>
+    <string name="enter_the_mobileotp_send_to">Please enter OTP sent to your corporate email id</string>
+    <string name="not_recieved_yet">Not Received yet?</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="select_developer">Select Developer</string>
+    <string name="logout">Log out</string>
+    <string name="feedback">FEEDBACK</string>
+    <string name="projects">PROJECTS</string>
+    <string name="events">EVENTS</string>
+    <string name="dummy_text_large">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della
+		stampa. Lorem Ipsum è considerato il testo segnaposto standard
+	</string>
+    <string name="no_interenet">Please check your internet connectivity</string>
+    <string name="un_expected_error">An unexpected error occurred, please try later</string>
+    <string-array name="project_tabs">
+        <item>Referral Offers</item>
+        <item>Project Details</item>
+        <!--		<item>Location</item>-->
+        <!--		<item>Construction Progress</item>-->
+        <!--		<item>Floor Plan</item>-->
+
+        <item>Gallery</item>
+        <item>Brochure</item>
+        <!--		<item>FAQ</item>-->
+        <!--		<item>Testimonials</item>-->
+
+    </string-array>
+
+    <string-array name="rewards_tab">
+        <item>Benefits</item>
+        <item>Referral Rewards</item>
+
+    </string-array>
+    <string-array name="notifications_tab">
+        <item>General</item>
+        <item>Lead Status</item>
+
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="submit">Submit</string>
+    <string name="please_enter_your_new_mobile_number">Please Enter Your New Mobile Number</string>
+    <string name="change_phone">Change Login Credentials</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="faqs">FAQs</string>
+    <string name="feed_back">Feedback</string>
+    <string name="lead_status">Lead Status</string>
+    <string name="notifications">Notifications</string>
+    <string name="app_tutorials">App Tutorials</string>
+    <string name="apply">Apply</string>
+    <string name="claimed">Claimed</string>
+    <string name="view_details">View Details</string>
+    <string name="eligible">Eligible</string>
+    <string name="benefits">Benefits</string>
+    <string name="please_rate_your_experience">Please rate your experience</string>
+    <string name="please_share_your_feedback_about_the_developer">Please share your feedback	</string>
+    <string name="pending">Pending</string>
+    <string name="declined">Declined</string>
+    <string name="accepted">Accepted</string>
+    <string name="are_you_sure_you_want">Are you sure you want to log out ?</string>
+    <string name="please_enter_your_mobile_number">Please enter your mobile number</string>
+    <string name="invalid_mobile">Invalid mobile number entered</string>
+    <string name="current_session_expired">Current session expired</string>
+    <string name="invalid_otp_entered">Invalid OTP entered</string>
+    <string name="error_in_fetching_doc">Error, Unable to open link</string>
+    <string name="refer_now">Refer Now</string>
+    <string name="rejected">Rejected</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="no_contact_number_available">No contact number available</string>
+    <string name="no_contact_email_available">No contact email available</string>
+    <string name="contact_share">Choose Contact</string>
+    <string name="share_on_social_media">Share On Social Media</string>
+    <string name="share_on_contact_detail">Enter Contact Details</string>
+    <string name="programs">Programs</string>
+    <string name="view">View</string>
+    <string name="you_are_not_part_of_any_programmes">You are not part of any programmes</string>
+    <string name="location_not_available">Location not available</string>
+    <string name="for_all">Select Project Name</string>
+    <string name="exclusive_offer">EXCLUSIVE OFFERS</string>
+    <string name="enter_email_address">Enter Email</string>
+    <string name="attherate">64 0x40</string>
+    <string name="default_text">Select domain</string>
+    <string name="Rs">\u20B9</string>
+    <string name="redemption_detail">Lorem ipsum dolor sit amet, sed ut verear definitionem, quas ullum cum eu. Malis legere necessitatibus in vix, tollit equidem consequat no mea. Eos id elitr eruditi, eu nam labitur insolens. Et augue elaboraret sed. Ad qui mutat autem. Ex dicit accusata sit. Et impedit persequeris cum. Eu sint aliquip persius qui, et dicat signiferumque mea, et consul laoreet alienum pri. Melius tractatos per ne, labore delenit constituto ad sed. Eu dolorem honestatis cum. Lorem ipsum dolor sit amet, sed ut verear definitionem, quas ullum cum eu. Malis legere necessitatibus in vix, tollit equidem consequat no mea. Eos id elitr eruditi, eu nam labitur insolens. Et augue elaboraret sed. Ad qui mutat autem.</string>
+    <string name="title_activity_dashboard">DashboardAct</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="billing_details">Billing Details</string>
+    <string name="rs">Rs </string>
+    <string-array name="dashboard_tabs">
+        <item>Overview</item>
+        <item>Payments</item>
+        <!--		<item>Location</item>-->
+        <!--		<item>Construction Progress</item>-->
+        <!--		<item>Floor Plan</item>-->
+
+        <item>Documents</item>
+
+        <!--		<item>FAQ</item>-->
+        <!--		<item>Testimonials</item>-->
+
+    </string-array>
+
+    <string name="valid_name">Please provide a valid name</string>
+    <string name="secretEncryption">PBKDF2WithHmacSHA1</string>
+    <string name="user_data">USER_DATA</string>
+    <!--    <string name="master_key">_androidx_security_master_key_</string>-->
+    <string name="master_key">_androidx_security_master_key_</string>
+    <string name="transformation">AES/CBC/PKCS5Padding</string>
+    <string name="key_transform">AES/ECB/PKCS5Padding</string>
+    <string name="algmfor">SHA-256</string>
+    <string name="fldfkl">fldsjfodasjifudslfjdsaofshaufihadsf</string>
+    <string name="default_notification_channel_id" translatable="false">com.happinest.happiedge</string>
+    <string name="add_land_proposals_to_share">Add Land Proposals to share</string>
+    <string name="android">AndroidKeyStore</string>
+    <string name="gcmenc">AES/GCM/NoPadding</string>
+    <string name="ecbenc">AES/ECB/PKCS7Padding</string>
+    <string name="minealias"><![CDATA[MINE*&-KeyAliasForEncryption]]></string>
+    <string name="rsaEnc">RSA/ECB/PKCS1Padding</string>
+    <string name="shared_key_name">Happiedge_shared_data</string>
+    <string name="enc_name">Happiedge_encrypted78%</string>
+
+</resources>

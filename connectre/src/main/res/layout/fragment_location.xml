@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/parentView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#f9f9f9"
+		tools:context=".ui.project.location.LocationFragment">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:descendantFocusability="blocksDescendants">
+
+		<FrameLayout
+				android:id="@+id/map"
+				android:layout_width="0dp"
+				android:layout_height="280dp"
+				android:background="#efefef"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+				android:id="@+id/errorTV"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/sinkinsans_400regular"
+				android:text="@string/location_not_available"
+				android:textColor="@color/greyMedium"
+				android:textSize="12sp"
+				android:visibility="gone"
+				app:layout_constraintBottom_toBottomOf="@id/map"
+				app:layout_constraintEnd_toEndOf="@id/map"
+				app:layout_constraintStart_toStartOf="@id/map"
+				app:layout_constraintTop_toTopOf="@id/map" />
+
+		<androidx.cardview.widget.CardView
+				android:id="@+id/locationCV"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="25dp"
+				android:layout_marginEnd="25dp"
+				android:layout_marginBottom="3dp"
+				android:background="#ffffff"
+				android:elevation="2dp"
+				app:cardCornerRadius="2dp"
+				app:cardElevation="5dp"
+				app:cardPreventCornerOverlap="false"
+
+				app:layout_constraintBottom_toBottomOf="@id/map"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/map">
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+				<androidx.appcompat.widget.AppCompatImageView
+						android:id="@+id/locationIcon"
+						android:layout_width="15dp"
+						android:layout_height="18dp"
+						android:layout_marginStart="12dp"
+						android:layout_marginTop="13dp"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						app:srcCompat="@drawable/ic_place_black_24dp" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+						android:id="@+id/locationTV"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="12dp"
+						android:letterSpacing="0.01"
+						android:textColor="@color/textColorGrey"
+						android:textSize="14sp"
+						app:fontFamily="@font/sinkinsans_500medium"
+						app:layout_constraintStart_toEndOf="@+id/locationIcon"
+						app:layout_constraintTop_toTopOf="parent" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+						android:id="@+id/locationAddressTV"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="12dp"
+						android:layout_marginTop="8dp"
+						android:layout_marginEnd="12dp"
+						android:letterSpacing="0.01"
+						android:lineHeight="20sp"
+						android:lineSpacingExtra="8sp"
+						android:textColor="@color/textColorGreyAlpha80"
+						android:textSize="10sp"
+						app:fontFamily="@font/sinkinsans_400regular"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/locationTV" />
+
+				<View
+						android:layout_width="0dp"
+						android:layout_height="19dp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/locationAddressTV" />
+
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+		</androidx.cardview.widget.CardView>
+
+		<View
+				android:id="@+id/tabBg"
+				android:layout_width="0dp"
+				android:layout_height="75dp"
+				android:background="@drawable/grey_gradient"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/locationCV" />
+
+		<com.google.android.material.tabs.TabLayout
+				android:id="@+id/locationTab"
+				android:layout_width="0dp"
+				android:layout_height="50dp"
+				android:layout_marginTop="25dp"
+				android:background="@android:color/transparent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/locationCV"
+				app:tabMode="scrollable"
+				app:tabSelectedTextColor="#662d92"
+				app:tabTextAppearance="@style/VenueTablayoutTextAppearance"
+				app:tabTextColor="@color/textColorGrey" />
+
+		<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/highltRV"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:clipToPadding="false"
+				android:paddingStart="15dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/locationTab" />
+
+		<!--<com.loyalie.util.WrapContentViewPager-->
+		<!--android:id="@+id/venueVP"-->
+		<!--android:layout_width="0dp"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--app:layout_constraintLeft_toLeftOf="parent"-->
+		<!--app:layout_constraintEnd_toEndOf="parent"-->
+		<!--app:layout_constraintTop_toBottomOf="@+id/locationTab"/>-->
+
+		<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/detailsRV"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:clipToPadding="false"
+				android:nestedScrollingEnabled="false"
+				android:paddingBottom="20dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/highltRV">
+
+		</androidx.recyclerview.widget.RecyclerView>
+
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

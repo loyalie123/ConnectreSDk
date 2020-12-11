@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/rootLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/black"
+		android:fitsSystemWindows="true"
+		android:orientation="vertical"
+		tools:context=".ui.splash.SplashActivity">
+
+	<com.facebook.shimmer.ShimmerFrameLayout
+			android:id="@+id/edelweissShimmer"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:shimmer_auto_start="true"
+			app:shimmer_duration="7000"
+			app:shimmer_fixed_height="150dp"
+			app:shimmer_fixed_width="0dp">
+
+		<ImageView
+				android:id="@+id/shapoorji_logo"
+				android:layout_width="wrap_content"
+				android:layout_height="150dp"
+				android:layout_gravity="center"
+				android:layout_marginStart="10dp"
+				android:layout_marginEnd="10dp"
+				android:src="@drawable/splash_logo"
+
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+
+				/>
+		<!--<zone.com.lightsweep.ShineImageView
+				android:id="@+id/shapoorji_logo"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:src="@drawable/splash_logo"
+				app:reflectionColor="#AAffffff"
+				app:reflectionRorate="30"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:reflectionWidth="10" />-->
+		<!--	<androidx.constraintlayout.widget.ConstraintLayout
+					android:layout_width="0dp"
+					android:layout_height="150dp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent">
+
+				<ImageView
+						android:id="@+id/shine"
+						android:layout_width="10dp"
+
+						android:layout_height="140dp"
+						android:src="@drawable/shine_animation"
+						android:layout_gravity="left"
+
+						android:layout_marginStart="10dp"
+						android:layout_marginEnd="10dp"
+
+
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="@+id/shapoorji_logo"/>
+			</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+	</com.facebook.shimmer.ShimmerFrameLayout>
+
+	<!--<com.facebook.shimmer.ShimmerFrameLayout
+			android:id="@+id/bottomShimmer"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+		>-->
+	<Button
+			android:id="@+id/btn"
+			android:layout_width="100dp"
+			android:layout_height="100dp"
+			android:layout_centerInParent="true"
+			android:background="@drawable/white_circle"
+			android:textColor="@android:color/white"
+			android:visibility="invisible"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+			android:id="@+id/bottom_logo"
+			android:layout_width="0dp"
+			android:layout_height="50dp"
+			android:layout_gravity="center"
+			android:layout_marginStart="66dp"
+			android:layout_marginEnd="66dp"
+			android:layout_marginBottom="15dp"
+			android:background="@android:color/black"
+			android:src="@drawable/group_8"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent" /><!--</com.facebook.shimmer.ShimmerFrameLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

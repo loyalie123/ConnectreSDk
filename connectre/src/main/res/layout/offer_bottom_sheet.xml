@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/shareSheet"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorAccent"
+		android:clickable="true"
+		android:elevation="4dp"
+		android:orientation="vertical"
+		app:behavior_hideable="false"
+		app:behavior_peekHeight="50dp"
+		app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+	<TextView
+			android:id="@+id/shareTitleTV"
+			android:layout_width="0dp"
+			android:layout_height="50dp"
+			android:background="@color/colorPrimary"
+			android:fontFamily="@font/sinkinsans_700bold"
+			android:gravity="center"
+			android:padding="16dp"
+			android:text="@string/refer_now"
+			android:textColor="@color/white"
+			android:textSize="13sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+			android:id="@+id/closeBtn"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginTop="4dp"
+			android:layout_marginBottom="4dp"
+			android:padding="8dp"
+			android:src="@drawable/ic_close_white"
+			android:visibility="gone"
+			app:layout_constraintBottom_toBottomOf="@id/shareTitleTV"
+			app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintEnd_toEndOf="@id/shareTitleTV"
+			app:layout_constraintTop_toTopOf="@id/shareTitleTV" />
+
+	<View
+			android:id="@+id/contactShareBtn"
+			android:layout_width="0dp"
+			android:layout_height="140dp"
+			android:background="?android:attr/selectableItemBackground"
+			app:layout_constraintEnd_toStartOf="@id/conDetailShareBtn"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/shareTitleTV" />
+
+	<View
+			android:id="@+id/conDetailShareBtn"
+			android:layout_width="0dp"
+			android:layout_height="140dp"
+			android:background="?android:attr/selectableItemBackground"
+			app:layout_constraintEnd_toStartOf="@+id/socialMediaShareBtn"
+			app:layout_constraintStart_toEndOf="@id/contactShareBtn"
+			app:layout_constraintTop_toBottomOf="@id/shareTitleTV" />
+
+	<View
+			android:id="@+id/socialMediaShareBtn"
+			android:layout_width="0dp"
+			android:layout_height="140dp"
+			android:background="?android:attr/selectableItemBackground"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/conDetailShareBtn"
+			app:layout_constraintTop_toBottomOf="@id/shareTitleTV" />
+
+
+	<ImageView
+			android:id="@+id/conatctIV"
+			android:layout_width="60dp"
+			android:layout_height="60dp"
+			android:layout_margin="4dp"
+			android:src="@drawable/profile_dummy"
+			app:layout_constraintBottom_toTopOf="@id/contShareTV"
+			app:layout_constraintEnd_toEndOf="@id/contactShareBtn"
+			app:layout_constraintStart_toStartOf="@id/contactShareBtn"
+			app:layout_constraintTop_toTopOf="@id/contactShareBtn"
+			app:layout_constraintVertical_chainStyle="packed" />
+
+	<ImageView
+			android:id="@+id/conDetailIV"
+			android:layout_width="60dp"
+			android:layout_height="60dp"
+			android:layout_margin="4dp"
+			android:src="@drawable/ic_group_193"
+			app:layout_constraintBottom_toTopOf="@id/conDetailTV"
+			app:layout_constraintEnd_toEndOf="@id/conDetailShareBtn"
+			app:layout_constraintStart_toStartOf="@id/conDetailShareBtn"
+			app:layout_constraintTop_toTopOf="@id/conDetailShareBtn"
+			app:layout_constraintVertical_chainStyle="packed" />
+
+	<ImageView
+			android:id="@+id/shareIV"
+			android:layout_width="60dp"
+			android:layout_height="60dp"
+			android:layout_margin="4dp"
+			android:src="@drawable/ic_share"
+			app:layout_constraintBottom_toTopOf="@id/socialMediaShareTV"
+			app:layout_constraintEnd_toEndOf="@id/socialMediaShareBtn"
+			app:layout_constraintStart_toStartOf="@id/socialMediaShareBtn"
+			app:layout_constraintTop_toTopOf="@id/socialMediaShareBtn"
+			app:layout_constraintVertical_chainStyle="packed" />
+
+
+	<TextView
+			android:id="@+id/contShareTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_margin="4dp"
+			android:fontFamily="@font/sinkinsans_400regular"
+			android:gravity="center"
+			android:lineSpacingExtra="4dp"
+			android:text="@string/contact_share"
+			android:textColor="@color/textColorGrey"
+			android:textSize="10sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="@id/contactShareBtn"
+			app:layout_constraintStart_toStartOf="@id/contactShareBtn"
+			app:layout_constraintTop_toBottomOf="@id/conatctIV"
+			app:layout_constraintVertical_chainStyle="packed" />
+
+	<TextView
+			android:id="@+id/conDetailTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_margin="4dp"
+			android:fontFamily="@font/sinkinsans_400regular"
+			android:gravity="center"
+			android:lineSpacingExtra="4dp"
+			android:text="@string/share_on_contact_detail"
+			android:textColor="@color/textColorGrey"
+			android:textSize="10sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="@id/conDetailShareBtn"
+			app:layout_constraintStart_toStartOf="@id/conDetailShareBtn"
+			app:layout_constraintTop_toBottomOf="@id/conDetailIV" />
+
+	<TextView
+			android:id="@+id/socialMediaShareTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_margin="4dp"
+			android:fontFamily="@font/sinkinsans_400regular"
+			android:gravity="center"
+			android:lineSpacingExtra="4dp"
+			android:text="@string/share_on_social_media"
+			android:textColor="@color/textColorGrey"
+			android:textSize="10sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="@id/socialMediaShareBtn"
+			app:layout_constraintStart_toStartOf="@id/socialMediaShareBtn"
+			app:layout_constraintTop_toBottomOf="@id/shareIV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

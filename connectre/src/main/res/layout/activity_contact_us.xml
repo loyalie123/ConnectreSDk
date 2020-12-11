@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".ui.contact_us.ContactUsActivity">
+
+	<include
+			android:id="@+id/contactToolbar"
+			layout="@layout/center_title_toolbar" />
+
+	<FrameLayout
+			android:id="@+id/map"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			app:layout_constraintDimensionRatio="H,1.5:1"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/contactToolbar" />
+
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/contactTitleTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="30dp"
+			android:letterSpacing="0.01"
+			android:text="Get In Touch"
+			android:textColor="#262626"
+			android:textSize="16sp"
+			app:fontFamily="@font/sinkinsans_700bold"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/map" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/locationAddressTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="15dp"
+			android:layout_marginEnd="20dp"
+			android:letterSpacing="0.01"
+			android:lineSpacingExtra="4dp"
+			android:textColor="#CC262626"
+			android:textSize="12sp"
+			app:fontFamily="@font/sinkinsans_400regular"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/contactTitleTV" />
+
+	<FrameLayout
+			android:id="@+id/contactMobRL"
+			android:layout_width="45dp"
+			android:layout_height="45dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="45dp"
+			android:background="@drawable/brick_blue_bubble"
+			android:elevation="2dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/locationAddressTV">
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:layout_gravity="center"
+				app:srcCompat="@drawable/ic_contact" />
+
+	</FrameLayout>
+
+	<FrameLayout
+			android:id="@+id/contactEmailRL"
+			android:layout_width="45dp"
+			android:layout_height="45dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="45dp"
+			android:background="@drawable/brick_blue_bubble"
+			android:elevation="2dp"
+			app:layout_constraintStart_toEndOf="@+id/contactMobRL"
+			app:layout_constraintTop_toBottomOf="@+id/locationAddressTV">
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:layout_width="22dp"
+				android:layout_height="15dp"
+				android:layout_gravity="center"
+				android:scaleType="fitXY"
+				app:srcCompat="@drawable/ic_contact_email" />
+
+	</FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

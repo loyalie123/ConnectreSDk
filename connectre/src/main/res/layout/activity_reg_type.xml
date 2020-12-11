@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#f4f4f4"
+		tools:context=".ui.register.RegTypeAct">
+	<!--<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:layout_constraintTop_toTopOf="parent">-->
+
+	<!--<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toTopOf="parent">-->
+
+	<include
+			android:id="@+id/registerToolbar"
+			layout="@layout/center_title_toolbar"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<View
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:background="@color/black"
+			app:layout_constraintDimensionRatio="H,18:7"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/registerToolbar" />
+
+	<androidx.cardview.widget.CardView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="80dp"
+			android:layout_marginEnd="20dp"
+			android:layout_marginBottom="37dp"
+			android:background="@color/white"
+			app:cardCornerRadius="3dp"
+			app:cardElevation="2dp"
+
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+
+			app:layout_constraintTop_toBottomOf="@+id/registerToolbar">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+
+				android:paddingBottom="10dp">
+
+			<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/emptype"
+					android:layout_width="135dp"
+					android:layout_height="135dp"
+					android:layout_marginTop="46dp"
+					android:src="@drawable/employee"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/headerTV"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="43dp"
+					android:fontFamily="@font/sinkinsans_700bold"
+					android:text="Let’s Register"
+					android:textColor="@color/charcoal_grey"
+					android:textSize="22sp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/emptype" />
+
+			<View
+					android:id="@+id/line_separator"
+					android:layout_width="0dp"
+					android:layout_height="0.8dp"
+					android:layout_marginStart="25dp"
+					android:layout_marginTop="10dp"
+					android:layout_marginEnd="25dp"
+					android:background="@color/black"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/headerTV" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/descTV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="30dp"
+					android:layout_marginTop="19dp"
+					android:layout_marginEnd="30dp"
+					android:fontFamily="@font/sinkinsans_400regular"
+					android:gravity="center"
+					android:lineSpacingExtra="12dp"
+					android:text="Select one of the following options to\n register as:"
+					android:textColor="@color/charcoal_grey"
+					android:textSize="12sp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/line_separator" />
+
+			<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/customer_type"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="25dp"
+					android:layout_marginTop="18dp"
+					android:layout_marginEnd="16dp"
+					android:background="@drawable/rounded_corner_orange_flled"
+					android:fontFamily="@font/sinkinsans_700bold"
+					android:paddingStart="22dp"
+					android:paddingTop="12dp"
+					android:paddingEnd="22dp"
+					android:paddingBottom="12dp"
+					android:text="Customer"
+					android:textAllCaps="false"
+					android:textColor="@color/white"
+					android:textSize="13sp"
+					app:layout_constraintEnd_toStartOf="@id/emp_type"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/descTV" />
+
+			<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/emp_type"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="18dp"
+					android:layout_marginEnd="25dp"
+					android:background="@drawable/rounded_corner_orange_flled"
+					android:fontFamily="@font/sinkinsans_700bold"
+					android:paddingStart="22dp"
+					android:paddingTop="12dp"
+
+					android:paddingEnd="22dp"
+					android:paddingBottom="12dp"
+					android:text="Employee"
+					android:textAllCaps="false"
+					android:textColor="@color/white"
+					android:textSize="13sp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toEndOf="@id/customer_type"
+					app:layout_constraintTop_toBottomOf="@+id/descTV" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+	</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout><!--	</ScrollView>-->
+		<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

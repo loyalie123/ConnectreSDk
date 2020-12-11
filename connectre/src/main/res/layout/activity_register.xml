@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".ui.register.RegisterAct">
+
+	<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toTopOf="parent">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="37dp"
+				android:background="#f4f4f4"
+				android:clipToPadding="false"
+				android:paddingBottom="30dp">
+
+			<include
+					android:id="@+id/registerToolbar"
+
+					layout="@layout/center_title_toolbar" />
+
+			<View
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:background="@color/black"
+					app:layout_constraintDimensionRatio="H,18:7"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintRight_toRightOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/registerToolbar" />
+
+			<androidx.cardview.widget.CardView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="20dp"
+					android:layout_marginTop="32dp"
+					android:layout_marginEnd="20dp"
+					android:layout_marginBottom="40dp"
+					android:background="@color/white"
+					android:paddingBottom="35dp"
+					app:cardCornerRadius="3dp"
+					app:cardElevation="2dp"
+					app:layout_constraintTop_toBottomOf="@+id/registerToolbar">
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="15dp"
+						android:layout_marginEnd="10dp"
+						android:paddingBottom="35dp">
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/regHead"
+							android:layout_width="0dp"
+							android:layout_height="50dp"
+							android:layout_marginTop="35dp"
+							android:text="Let's Register"
+							android:textColor="@color/charcoal_grey"
+							android:textSize="22sp"
+							app:fontFamily="@font/sinkinsans_700bold"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toTopOf="parent" />
+
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/nameLabelTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+
+							android:layout_marginTop="19dp"
+							android:text="Name"
+
+							android:textColor="@color/charcoal_grey"
+							android:textSize="14sp"
+							app:fontFamily="@font/sinkinsans_500medium"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/regHead" />
+
+					<androidx.appcompat.widget.AppCompatEditText
+							android:id="@+id/nameET"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="16dp"
+							android:background="@android:color/transparent"
+
+							android:hint="Enter Name"
+							android:inputType="textCapSentences"
+							android:singleLine="true"
+							android:textColor="@color/black"
+							android:textColorHint="@color/pinkish_grey"
+							android:textSize="14sp"
+							android:theme="@style/editCommonText"
+							app:fontFamily="@font/sinkinsans_500medium"
+
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/nameLabelTV" />
+
+					<View
+							android:id="@+id/nameView"
+							android:layout_width="match_parent"
+							android:layout_height="0.5dp"
+							android:layout_marginTop="16dp"
+
+							android:background="@color/pinkishGrey"
+							app:layout_constraintEnd_toEndOf="@+id/nameET"
+							app:layout_constraintStart_toStartOf="@+id/nameET"
+							app:layout_constraintTop_toBottomOf="@+id/nameET" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/mobLabelTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="33.5dp"
+							android:text="Mobile Number"
+							android:textColor="@color/charcoal_grey"
+
+							android:textSize="14sp"
+							android:visibility="gone"
+							app:fontFamily="@font/sinkinsans_500medium"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/nameView" />
+
+					<androidx.appcompat.widget.AppCompatEditText
+							android:id="@+id/mobET"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="16dp"
+							android:background="@android:color/transparent"
+							android:hint="Enter Mobile Number"
+							android:inputType="number"
+							android:singleLine="true"
+							android:textColor="@color/black"
+							android:textColorHint="@color/pinkish_grey"
+							android:textSize="14sp"
+							android:theme="@style/editCommonText"
+							android:visibility="gone"
+							app:fontFamily="@font/sinkinsans_500medium"
+
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/mobLabelTV" />
+
+					<View
+							android:id="@+id/mobView"
+							android:layout_width="match_parent"
+							android:layout_height="0.5dp"
+							android:layout_marginTop="16dp"
+							android:background="@color/pinkishGrey"
+							android:visibility="gone"
+							app:layout_constraintEnd_toEndOf="@+id/mobET"
+							app:layout_constraintStart_toStartOf="@+id/mobET"
+							app:layout_constraintTop_toBottomOf="@+id/mobET" />
+
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/emailLabelTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+
+							android:layout_marginTop="33.5dp"
+							android:text="Email Address"
+
+							android:textColor="@color/charcoal_grey"
+							android:textSize="14sp"
+							app:fontFamily="@font/sinkinsans_500medium"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/mobView" />
+
+					<androidx.appcompat.widget.AppCompatEditText
+							android:id="@+id/emailET"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="16dp"
+							android:background="@android:color/transparent"
+							android:hint="@string/enter_email_address"
+							android:inputType="textEmailAddress"
+							android:singleLine="true"
+							android:textColor="@color/black"
+							android:textColorHint="@color/pinkish_grey"
+							android:textSize="14sp"
+							android:theme="@style/editCommonText"
+							app:fontFamily="@font/sinkinsans_500medium"
+							app:layout_constraintEnd_toStartOf="@+id/suffxTV"
+
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/emailLabelTV" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/suffxTV"
+							android:layout_width="13dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="5dp"
+							android:layout_marginTop="16dp"
+							android:background="@android:color/transparent"
+							android:gravity="center"
+							android:text="@string/attherate"
+							android:textColor="@color/charcoal_grey"
+							android:textSize="14sp"
+							app:fontFamily="@font/sinkinsans_500medium"
+							app:layout_constraintEnd_toStartOf="@+id/spnnerdomain"
+							app:layout_constraintStart_toEndOf="@+id/emailET"
+							app:layout_constraintTop_toBottomOf="@+id/emailLabelTV" />
+
+					<androidx.appcompat.widget.AppCompatSpinner
+							android:id="@+id/spnnerdomain"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="16dp"
+							android:background="@null"
+
+							android:padding="0dp"
+							android:spinnerMode="dialog"
+
+							android:textColor="@color/charcoal_grey"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toEndOf="@+id/suffxTV"
+							app:layout_constraintTop_toBottomOf="@+id/emailLabelTV" />
+
+					<View
+							android:id="@+id/emailView"
+							android:layout_width="match_parent"
+							android:layout_height="0.5dp"
+							android:layout_marginTop="16dp"
+							android:background="@color/pinkishGrey"
+							app:layout_constraintEnd_toEndOf="@+id/emailET"
+							app:layout_constraintStart_toStartOf="@+id/emailET"
+							app:layout_constraintTop_toBottomOf="@+id/emailET" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/companyNameLabelTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+
+							android:layout_marginTop="33.5dp"
+							android:text="Company Name"
+
+							android:textColor="@color/charcoal_grey"
+							android:textSize="14sp"
+							app:fontFamily="@font/sinkinsans_500medium"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/emailView" />
+
+					<androidx.appcompat.widget.AppCompatEditText
+							android:id="@+id/compNameET"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="16dp"
+							android:background="@android:color/transparent"
+
+							android:hint="Enter Company Name"
+							android:inputType="textCapSentences"
+							android:singleLine="true"
+							android:textColor="@color/black"
+							android:textColorHint="@color/pinkish_grey"
+							android:textSize="14sp"
+							android:theme="@style/editCommonText"
+							app:fontFamily="@font/sinkinsans_500medium"
+
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/companyNameLabelTV" />
+
+					<View
+							android:id="@+id/companylView"
+							android:layout_width="match_parent"
+							android:layout_height="0.5dp"
+							android:layout_marginTop="16dp"
+							android:background="@color/pinkishGrey"
+
+							app:layout_constraintEnd_toEndOf="@+id/compNameET"
+							app:layout_constraintStart_toStartOf="@+id/compNameET"
+							app:layout_constraintTop_toBottomOf="@+id/compNameET" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/designationLabelTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+
+							android:layout_marginTop="33.5dp"
+							android:text="Designation"
+
+							android:textColor="@color/charcoal_grey"
+							android:textSize="14sp"
+							app:fontFamily="@font/sinkinsans_500medium"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/companylView" />
+
+					<androidx.appcompat.widget.AppCompatEditText
+							android:id="@+id/designationET"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="16dp"
+							android:background="@android:color/transparent"
+
+							android:hint="Enter Designation"
+							android:inputType="textCapSentences"
+							android:singleLine="true"
+							android:textColor="@color/black"
+							android:textColorHint="@color/pinkish_grey"
+							android:textSize="14sp"
+							android:theme="@style/editCommonText"
+							app:fontFamily="@font/sinkinsans_500medium"
+
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/designationLabelTV" />
+
+					<View
+							android:id="@+id/desigView"
+							android:layout_width="match_parent"
+							android:layout_height="0.5dp"
+							android:layout_marginTop="16dp"
+							android:background="@color/pinkishGrey"
+
+							app:layout_constraintEnd_toEndOf="@+id/designationET"
+							app:layout_constraintStart_toStartOf="@+id/designationET"
+							app:layout_constraintTop_toBottomOf="@+id/designationET" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/empIdLabel"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+
+							android:layout_marginTop="33.5dp"
+							android:text="Employee ID"
+
+							android:textColor="@color/charcoal_grey"
+							android:textSize="14sp"
+							app:fontFamily="@font/sinkinsans_500medium"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/desigView" />
+
+					<androidx.appcompat.widget.AppCompatEditText
+							android:id="@+id/empidTV"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="16dp"
+							android:background="@android:color/transparent"
+
+							android:hint="Enter Employee ID"
+							android:inputType="text"
+							android:singleLine="true"
+							android:textColor="@color/black"
+							android:textColorHint="@color/pinkish_grey"
+							android:textSize="14sp"
+							android:theme="@style/editCommonText"
+							app:fontFamily="@font/sinkinsans_500medium"
+
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/empIdLabel" />
+
+					<View
+							android:id="@+id/empIdView"
+							android:layout_width="match_parent"
+							android:layout_height="0.5dp"
+							android:layout_marginTop="16dp"
+							android:background="@color/pinkishGrey"
+
+							app:layout_constraintEnd_toEndOf="@+id/empidTV"
+							app:layout_constraintStart_toStartOf="@+id/empidTV"
+							app:layout_constraintTop_toBottomOf="@+id/empidTV" />
+
+
+					<!--	<androidx.appcompat.widget.AppCompatTextView
+								android:id="@+id/flatLabelTV"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+
+								android:layout_marginTop="40dp"
+								android:text="Flat Number"
+
+								android:textColor="@color/textColorGunMetal"
+								android:textSize="14sp"
+								app:fontFamily="@font/sinkinsans_500medium"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+						<androidx.appcompat.widget.AppCompatEditText
+								android:id="@+id/flatET"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="16dp"
+								android:background="@android:color/transparent"
+
+								android:hint="Enter Flat Number"
+								android:inputType="text"
+								android:singleLine="true"
+								android:textColor="@color/black"
+								android:textColorHint="@color/greyHint"
+								android:textSize="13sp"
+								android:theme="@style/editCommonText"
+								app:fontFamily="@font/sinkinsans_400regular"
+
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toBottomOf="@+id/flatLabelTV" />
+
+						<View
+								android:id="@+id/flatView"
+								android:layout_width="match_parent"
+								android:layout_height="0.5dp"
+								android:layout_marginTop="10dp"
+								android:background="@color/pinkishGrey"
+								android:visibility="gone"
+								app:layout_constraintEnd_toEndOf="@+id/flatET"
+								app:layout_constraintStart_toStartOf="@+id/flatET"
+								app:layout_constraintTop_toBottomOf="@+id/flatET" />
+						<androidx.appcompat.widget.AppCompatTextView
+								android:id="@+id/customerIdLabelTV"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+
+								android:layout_marginTop="40dp"
+								android:text="Customer ID"
+
+								android:textColor="@color/textColorGunMetal"
+								android:textSize="14sp"
+								app:fontFamily="@font/sinkinsans_500medium"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toBottomOf="@+id/flatView" />
+
+						<androidx.appcompat.widget.AppCompatEditText
+								android:id="@+id/customerIdET"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="16dp"
+								android:background="@android:color/transparent"
+
+								android:hint="Enter Customer ID"
+								android:inputType="text"
+								android:singleLine="true"
+								android:textColor="@color/black"
+								android:textColorHint="@color/greyHint"
+								android:textSize="13sp"
+								android:theme="@style/editCommonText"
+								app:fontFamily="@font/sinkinsans_400regular"
+
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toBottomOf="@+id/customerIdLabelTV" />
+						-->
+					<androidx.appcompat.widget.AppCompatButton
+							android:id="@+id/registerBtn"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="35.5dp"
+							android:layout_marginBottom="40dp"
+							android:background="@drawable/rounded_corner_orange_flled"
+
+							android:fontFamily="@font/sinkinsans_600semibold"
+							android:paddingStart="24dp"
+							android:paddingTop="15dp"
+							android:paddingEnd="24dp"
+							android:paddingBottom="15dp"
+							android:text="Register"
+							android:textAllCaps="false"
+							android:textColor="@color/white"
+							android:textSize="14sp"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/empIdView" />
+				</androidx.constraintlayout.widget.ConstraintLayout>
+			</androidx.cardview.widget.CardView>
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

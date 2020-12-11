@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".ui.event.EventActivity">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		<include
+				android:id="@+id/eventToolbar"
+				layout="@layout/center_title_toolbar" />
+
+		<androidx.coordinatorlayout.widget.CoordinatorLayout
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/eventToolbar">
+
+			<com.google.android.material.appbar.AppBarLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fitsSystemWindows="true">
+
+				<com.google.android.material.appbar.CollapsingToolbarLayout
+						android:id="@+id/toolbar_layout"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:fitsSystemWindows="true"
+						app:contentScrim="?attr/colorAccent"
+						app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+					<ImageView
+							android:id="@+id/eventIV"
+							android:layout_width="match_parent"
+							android:layout_height="200dp"
+							android:background="@color/white"
+							android:scaleType="centerCrop"
+							app:layout_collapseMode="parallax"
+							app:layout_collapseParallaxMultiplier="0.7" />
+
+
+				</com.google.android.material.appbar.CollapsingToolbarLayout>
+
+			</com.google.android.material.appbar.AppBarLayout>
+
+			<androidx.core.widget.NestedScrollView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:descendantFocusability="blocksDescendants">
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/eventTitleTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="20dp"
+							android:layout_marginTop="25dp"
+							android:layout_marginEnd="20dp"
+							android:lineSpacingExtra="10sp"
+							android:maxLines="2"
+							android:text="@string/dummy_text_large"
+							android:textColor="#262626"
+							android:textSize="18sp"
+							app:fontFamily="@font/sinkinsans_700bold"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toTopOf="parent" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/dateTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="20dp"
+							android:layout_marginTop="10dp"
+							android:layout_marginEnd="20dp"
+							android:letterSpacing="0.01"
+							android:text="Dec 16, 2018- Dec 26, 2018"
+							android:textColor="#262626"
+							android:textSize="14sp"
+							app:fontFamily="@font/sinkinsans_500medium"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/eventTitleTV" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/descriptionTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="20dp"
+							android:layout_marginTop="30dp"
+							android:layout_marginEnd="20dp"
+							android:lineSpacingExtra="4dp"
+							android:text="@string/dummy_text_large"
+							android:textColor="@color/textColorGreyAlpha80"
+							android:textSize="14sp"
+							app:fontFamily="@font/sinkinsans_400regular"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/dateTV" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/subDescriptionTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="20dp"
+							android:layout_marginTop="30dp"
+							android:layout_marginEnd="20dp"
+							android:lineSpacingExtra="4dp"
+							android:text="@string/dummy_text_large"
+							android:textColor="@color/textColorGreyAlpha60"
+							android:textSize="12sp"
+							app:fontFamily="@font/sinkinsans_400regular"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/descriptionTV" />
+
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+			</androidx.core.widget.NestedScrollView>
+
+
+		</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/appliedBtn"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:animateLayoutChanges="true"
+				android:foreground="?android:attr/selectableItemBackground"
+				android:gravity="center"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintStart_toStartOf="parent">
+
+			<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/applyTickIV"
+					android:layout_width="30dp"
+					android:layout_height="20dp"
+					android:visibility="gone"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toStartOf="@id/appliedTV"
+					app:layout_constraintHorizontal_chainStyle="packed"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:srcCompat="@drawable/ic_done_white_24dp" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/appliedTV"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginStart="5dp"
+					android:text="@string/apply"
+					android:textAllCaps="false"
+					android:textColor="@color/white"
+					android:textSize="18sp"
+					app:fontFamily="@font/sinkinsans_700bold"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toEndOf="@id/applyTickIV"
+					app:layout_constraintTop_toTopOf="parent" />
+
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+	<View
+			android:id="@+id/blurView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#f2E5E9E9"
+			android:visibility="gone" />
+
+	<include layout="@layout/event_applied_bottom_sheet" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

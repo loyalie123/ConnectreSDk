@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+	<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/referIV"
+
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="20dp"
+			android:src="@drawable/refer_dummy"
+			app:layout_constraintDimensionRatio="16:9"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/referHeadingTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="10dp"
+			android:ellipsize="end"
+			android:maxLines="2"
+			android:text=""
+			android:textColor="#262626"
+			android:textSize="14sp"
+
+			app:fontFamily="@font/sinkinsans_500medium"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+
+			app:layout_constraintTop_toBottomOf="@+id/referIV" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/descTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="5dp"
+			android:layout_marginEnd="10dp"
+			android:ellipsize="end"
+			android:lineSpacingExtra="2.5dp"
+			android:maxLines="4"
+			android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has "
+			android:textColor="#B3262626"
+			android:textSize="11sp"
+			android:visibility="gone"
+			app:fontFamily="@font/sinkinsans_400regular"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/referHeadingTV" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/validityTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="12dp"
+			android:layout_marginEnd="10dp"
+			android:ellipsize="end"
+			android:singleLine="true"
+			android:text="Valid from Dec 16, 2018 - Dec 26, 2018"
+			android:textColor="#99262626"
+			android:textSize="9sp"
+			app:fontFamily="@font/sinkinsans_400regular"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/descTV" />
+
+	<View
+			android:layout_width="0dp"
+			android:layout_height="0.5dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="20dp"
+			android:background="#1a000000"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/validityTV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

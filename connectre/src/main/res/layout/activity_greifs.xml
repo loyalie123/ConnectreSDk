@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".ui.dashboard.GreifsActivity">
+<include layout="@layout/close_title_toolbar"
+	android:id="@+id/greifToolbar"/>
+<TextView
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toBottomOf="@+id/greifToolbar"
+		app:layout_constraintStart_toStartOf="parent"
+		android:layout_marginStart="21dp"
+		android:layout_marginTop="39dp"
+		android:textColor="@color/charcoal_grey"
+		android:fontFamily="@font/sinkinsans_500medium"
+		android:textSize="15sp"
+		android:id="@+id/titleTv"
+		app:layout_constraintEnd_toStartOf="@+id/addBtn"
+		android:text="My Griefs/Feedbacks"/>
+	<ImageView
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+			android:id="@+id/addBtn"
+			android:src="@drawable/ic_plus"
+			android:layout_marginEnd="16dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/greifToolbar"
+			app:layout_constraintStart_toEndOf="@+id/titleTv"
+			android:layout_marginTop="33dp"/>
+	<androidx.recyclerview.widget.RecyclerView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:id="@+id/greifRcv"
+			android:clipToPadding="false"
+			android:layoutAnimation="@anim/layout_anim_falldown"
+		android:layout_marginTop="120dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+
+			app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+			/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+	<com.makeramen.roundedimageview.RoundedImageView
+			android:id="@+id/rewardIV"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			android:src="@drawable/lead_dummy"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:riv_corner_radius="4dp" />
+
+	<TextView
+			android:id="@+id/rewardNameTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginEnd="20dp"
+			android:fontFamily="@font/sinkinsans_700bold"
+			android:text="Reward Name"
+			android:textColor="@color/textColorGrey"
+			android:textSize="14sp"
+			app:layout_constraintBottom_toTopOf="@id/programNameTV"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/rewardIV"
+			app:layout_constraintTop_toTopOf="@id/rewardIV" />
+
+	<TextView
+			android:id="@+id/programNameTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="4dp"
+			android:layout_marginEnd="20dp"
+			android:fontFamily="@font/sinkinsans_500medium"
+			android:text="Program Name"
+			android:textColor="@color/textColorGrey"
+			android:textSize="11sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/rewardIV"
+			app:layout_constraintTop_toBottomOf="@id/rewardNameTV" />
+
+	<TextView
+			android:id="@+id/expiryDateTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="24dp"
+			android:layout_marginEnd="20dp"
+			android:fontFamily="@font/sinkinsans_400regular"
+			android:text="Offer Available till 02 May 2019"
+			android:textColor="@color/textColorGreyAlpha70"
+			android:textSize="11sp"
+			app:layout_constraintEnd_toStartOf="@id/rewardCodeTV"
+			app:layout_constraintStart_toStartOf="@id/rewardIV"
+			app:layout_constraintTop_toBottomOf="@id/programNameTV" />
+
+	<TextView
+			android:id="@+id/benfitExpiryDateTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="20dp"
+			android:fontFamily="@font/sinkinsans_400regular"
+			android:gravity="end"
+			android:paddingTop="7dp"
+			android:text="Offer Available till 02 May 2019"
+			android:textColor="@color/textColorGreyAlpha70"
+			android:textSize="13sp"
+			android:visibility="gone"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="@id/rewardIV"
+			app:layout_constraintTop_toBottomOf="@id/rewardCodeTV" />
+
+	<TextView
+			android:id="@+id/rewardCodeTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="15dp"
+			android:layout_marginEnd="20dp"
+			android:background="@drawable/grey_dashed_rect"
+			android:fontFamily="@font/sinkinsans_700bold"
+			android:gravity="center"
+			android:padding="8dp"
+			android:text="MAH 2015"
+			android:textColor="@color/colorPrimary"
+			android:textSize="11sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/programNameTV" />
+
+	<View
+			android:layout_width="0dp"
+			android:layout_height="0.5dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="15dp"
+			android:layout_marginEnd="18dp"
+			android:background="@color/textColorGreyAlpha10"
+			android:paddingTop="5dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/benfitExpiryDateTV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

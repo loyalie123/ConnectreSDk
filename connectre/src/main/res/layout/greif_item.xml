@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+
+		android:layout_height="wrap_content">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/constraintMain"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="12dp"
+			android:layout_marginTop="15.5dp"
+
+			android:layout_marginEnd="12dp"
+
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
+
+		<com.makeramen.roundedimageview.RoundedImageView
+				android:id="@+id/profileIV"
+				android:layout_width="67dp"
+				android:layout_height="67dp"
+				android:layout_marginStart="18dp"
+				android:layout_marginTop="16dp"
+				android:src="@drawable/profile_dummy"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/nameTv"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="14dp"
+				android:layout_marginTop="19dp"
+				android:ellipsize="end"
+				android:fontFamily="@font/sinkinsans_500medium"
+				android:singleLine="true"
+
+				android:text="Nick Jonas"
+				android:textColor="@color/charcoal_grey"
+				android:textSize="13sp"
+				app:layout_constraintEnd_toStartOf="@+id/statusGreifTv"
+				app:layout_constraintStart_toEndOf="@+id/profileIV"
+				app:layout_constraintTop_toTopOf="parent" />
+
+		<androidx.constraintlayout.widget.Group
+				android:id="@+id/group"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:constraint_referenced_ids="statusGreifTv,downArrowIv" />
+
+		<TextView
+				android:id="@+id/statusGreifTv"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="19dp"
+				android:layout_marginEnd="15dp"
+				android:fontFamily="@font/sinkinsans_500medium"
+				android:gravity="end"
+				android:text="Pending"
+				android:textColor="#ea2c00"
+				android:textSize="13sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/nameTv"
+				app:layout_constraintTop_toTopOf="parent"
+
+				/>
+
+		<ImageView
+				android:id="@+id/downArrowIv"
+				android:layout_width="12.4dp"
+				android:layout_height="7dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="20dp"
+				android:src="@drawable/ic_arrow_point_to_right"
+				app:layout_constraintEnd_toEndOf="parent"
+
+				app:layout_constraintTop_toBottomOf="@+id/statusGreifTv" />
+
+		<TextView
+				android:id="@+id/dateTv"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="14dp"
+
+				android:fontFamily="@font/sinkinsans_400regular"
+				android:text="20 July 2020"
+				android:textColor="#b4b4b4"
+				android:textSize="9sp"
+
+				app:layout_constraintStart_toEndOf="@+id/profileIV"
+				app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+		<TextView
+				android:id="@+id/descTv"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="14dp"
+				android:layout_marginTop="12dp"
+				android:layout_marginEnd="15dp"
+				android:fontFamily="@font/sinkinsans_500medium"
+				android:lineSpacingExtra="2sp"
+				android:text="My Receipt Value is not tallying"
+				android:textColor="@color/charcoal_grey"
+				android:textSize="12sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/profileIV"
+				app:layout_constraintTop_toBottomOf="@+id/dateTv" />
+
+		<TextView
+				android:id="@+id/longDescTv"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="23dp"
+				android:layout_marginTop="13dp"
+				android:layout_marginEnd="5dp"
+				android:fontFamily="@font/sinkinsans_400regular"
+				android:lineSpacingExtra="9sp"
+				android:text="Lorem ipsum, or lipsum as it is some times  known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the "
+				android:textColor="#000000"
+				android:textSize="9sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/descTv" />
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/constraitInner"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="18dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/longDescTv">
+
+			<TextView
+					android:id="@+id/longDescTv2"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="23dp"
+
+					android:layout_marginEnd="15dp"
+					android:fontFamily="@font/sinkinsans_400regular"
+					android:lineSpacingExtra="9sp"
+					android:paddingBottom="10dp"
+					android:text="Lorem ipsum, or lipsum as it is sometimes  known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the "
+					android:textColor="#000000"
+					android:textSize="9sp"
+					app:layout_constraintEnd_toStartOf="@+id/profile2IV"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+			<com.makeramen.roundedimageview.RoundedImageView
+					android:id="@+id/profile2IV"
+					android:layout_width="62dp"
+					android:layout_height="62dp"
+
+
+					android:layout_marginEnd="15dp"
+					android:src="@drawable/profile_dummy"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toEndOf="@+id/longDescTv2"
+					app:layout_constraintTop_toTopOf="parent" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<View
+				android:id="@+id/greifView"
+				android:layout_width="0dp"
+				android:layout_height="1dp"
+
+				android:layout_marginTop="20dp"
+
+				android:background="@color/lightGrey"
+				android:paddingBottom="10dp"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/longDescTv" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".ui.offer.OfferDetailsActivity">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		<include
+				android:id="@+id/offerToolbar"
+				layout="@layout/center_title_toolbar" />
+
+
+		<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+				android:id="@+id/swipeRL"
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/offerToolbar">
+
+
+			<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/offerDetailsRV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:clipToPadding="false"
+					android:layoutAnimation="@anim/layout_anim_falldown"
+					android:paddingTop="20dp"
+					android:paddingBottom="50dp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent" />
+
+
+		</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/defaultTV"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/sinkinsans_400regular"
+				android:gravity="center"
+				android:text="No Offers found"
+				android:textColor="@color/textColorGreyAlpha60"
+				android:textSize="16sp"
+				android:visibility="visible"
+				app:fontFamily="@font/sinkinsans_400regular"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<include layout="@layout/offer_bottom_sheet" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

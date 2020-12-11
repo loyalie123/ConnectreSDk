@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".ui.otp.OtpActivity">
+
+	<TextView
+			android:id="@+id/verifyLabelTV"
+			style="@style/UbuntuMediumText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="80dp"
+			android:fontFamily="@font/sinkinsans_500medium"
+			android:text="@string/verify_mobile"
+			android:textColor="@color/textColorDark"
+			android:textSize="18sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+			android:id="@+id/enterOtpLabelTV"
+			style="@style/UbuntuMediumText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:text="@string/enter_the_otp_send_to"
+			android:textColor="@color/greyMedium"
+			android:textSize="12sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/verifyLabelTV" />
+
+	<androidx.appcompat.widget.AppCompatEditText
+			android:id="@+id/otpOneET"
+			style="@style/UbuntuMediumText"
+			android:layout_width="60dp"
+			android:layout_height="45dp"
+			android:layout_marginStart="16dp"
+			android:layout_marginTop="28dp"
+			android:gravity="center"
+			android:inputType="number"
+			android:maxLength="1"
+			android:textColor="@color/textColorDark"
+			android:theme="@style/EditTextTheme"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintLeft_toLeftOf="parent"
+
+			app:layout_constraintRight_toLeftOf="@+id/otpTwoET"
+			app:layout_constraintTop_toBottomOf="@id/enterOtpLabelTV" />
+
+
+	<androidx.appcompat.widget.AppCompatEditText
+			android:id="@+id/otpTwoET"
+			style="@style/UbuntuMediumText"
+			android:layout_width="60dp"
+			android:layout_height="45dp"
+			android:layout_marginStart="8dp"
+			android:gravity="center"
+			android:inputType="number"
+			android:maxLength="1"
+			android:textColor="@color/textColorDark"
+
+			android:theme="@style/EditTextTheme"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintLeft_toRightOf="@+id/otpOneET"
+			app:layout_constraintRight_toLeftOf="@+id/otpThreeET"
+			app:layout_constraintTop_toTopOf="@id/otpOneET" />
+
+	<androidx.appcompat.widget.AppCompatEditText
+			android:id="@+id/otpThreeET"
+			style="@style/UbuntuMediumText"
+			android:layout_width="60dp"
+			android:layout_height="45dp"
+			android:layout_marginStart="8dp"
+			android:gravity="center"
+			android:inputType="number"
+			android:maxLength="1"
+			android:textColor="@color/textColorDark"
+			android:theme="@style/EditTextTheme"
+
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintLeft_toRightOf="@+id/otpTwoET"
+			app:layout_constraintRight_toLeftOf="@+id/otpFourET"
+			app:layout_constraintTop_toTopOf="@id/otpOneET" />
+
+	<androidx.appcompat.widget.AppCompatEditText
+			android:id="@+id/otpFourET"
+			style="@style/UbuntuMediumText"
+			android:layout_width="60dp"
+			android:layout_height="45dp"
+			android:layout_marginStart="8dp"
+			android:gravity="center"
+			android:inputType="number"
+			android:maxLength="1"
+			android:textColor="@color/textColorDark"
+			android:theme="@style/EditTextTheme"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintLeft_toRightOf="@+id/otpThreeET"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="@id/otpOneET"
+
+			/>
+
+	<TextView
+			android:id="@+id/notRecievedLabelTV"
+			style="@style/UbuntuMediumText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="24dp"
+			android:text="@string/not_recieved_yet"
+			android:textColor="@color/greyMedium"
+			android:textSize="9sp"
+			app:layout_constraintEnd_toStartOf="@id/resendOTPTV"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/otpOneET" />
+
+	<TextView
+			android:id="@+id/resendOTPTV"
+			style="@style/UbuntuMediumText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="24dp"
+			android:fontFamily="@font/sinkinsans_500medium"
+			android:text="@string/resend_otp"
+			android:textColor="@color/textColorDark"
+			android:textSize="9sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/notRecievedLabelTV"
+			app:layout_constraintTop_toBottomOf="@id/otpOneET" />
+
+	<TextView
+			android:id="@+id/continueBtn"
+			style="@style/UbuntuText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="36dp"
+			android:background="@drawable/green_rect_selector"
+			android:foreground="?android:attr/selectableItemBackground"
+
+			android:paddingStart="24dp"
+			android:paddingTop="12dp"
+			android:paddingEnd="24dp"
+			android:paddingBottom="12dp"
+			android:text="@string/continue_"
+			android:textColor="@color/black"
+			android:textSize="12sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/resendOTPTV"
+			app:layout_constraintVertical_chainStyle="spread" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dp"
+		android:background="@drawable/rounded_corner_bg_white"
+		android:clipToPadding="false"
+		android:elevation="10dp"
+		android:orientation="vertical">
+	<!--
+	<androidx.cardview.widget.CardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toTopOf="parent"
+
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+
+			app:cardCornerRadius="15dp"
+
+
+			app:cardElevation="4dp">
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">-->
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/alrtHead"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="76dp"
+			android:fontFamily="@font/sinkinsans_700bold"
+			android:gravity="center"
+			android:text="Thank You!"
+			android:textColor="@color/charcoal_grey"
+			android:textSize="22sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/descTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="27dp"
+			android:fontFamily="@font/sinkinsans_400regular"
+			android:gravity="center"
+			android:lineSpacingExtra="4dp"
+			android:paddingBottom="76dp"
+			android:text="Your registration request is \nbeing processed!"
+			android:textColor="@color/charcoal_grey"
+			android:textSize="12sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/alrtHead" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

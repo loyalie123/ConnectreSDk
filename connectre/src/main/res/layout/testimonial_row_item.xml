@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+	<com.makeramen.roundedimageview.RoundedImageView
+			android:id="@+id/profileIV"
+			android:layout_width="45dp"
+			android:layout_height="45dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:riv_oval="true"
+			app:srcCompat="@drawable/profile_dummy" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/authorTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="15dp"
+			android:layout_marginTop="20dp"
+			android:ellipsize="end"
+			android:letterSpacing="0.01"
+			android:maxLines="1"
+			android:textColor="@color/textColorGrey"
+			android:textSize="14sp"
+			app:fontFamily="@font/sinkinsans_500medium"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/profileIV"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/subTitleTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="15dp"
+			android:layout_marginTop="5dp"
+			android:ellipsize="end"
+			android:letterSpacing="0.01"
+			android:maxLines="1"
+			android:text="Fu reso popolare, negli"
+			android:textColor="@color/textColorGreyAlpha60"
+			android:textSize="10sp"
+			app:fontFamily="@font/sinkinsans_500medium"
+			app:layout_constraintStart_toEndOf="@+id/profileIV"
+			app:layout_constraintTop_toBottomOf="@+id/authorTV" />
+
+	<RatingBar
+			android:id="@+id/feedbackRB"
+			style="?android:attr/ratingBarStyleSmall"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="15dp"
+			android:layout_marginTop="12dp"
+			android:backgroundTint="#e3e3e3"
+			android:isIndicator="true"
+			android:numStars="5"
+			android:progressTint="#f5a623"
+			android:secondaryProgressTint="#e3e3e3"
+			android:stepSize="1"
+			app:layout_constraintStart_toEndOf="@+id/profileIV"
+			app:layout_constraintTop_toBottomOf="@+id/subTitleTV" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/commentTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="15dp"
+			android:layout_marginEnd="20dp"
+			android:lineSpacingExtra="8sp"
+			android:text="Euniversalmente riconosciuto che un lettore che osserva il layout di una pagina viene distratto dal contenuto testuale se questo è"
+			android:textColor="@color/textColorGreyAlpha80"
+			android:textSize="11sp"
+			app:fontFamily="@font/sinkinsans_400regular"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/feedbackRB" />
+
+	<View
+			android:layout_width="0dp"
+			android:layout_height="0.5dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="20dp"
+			android:background="@color/textColorGreyAlpha10"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/commentTV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

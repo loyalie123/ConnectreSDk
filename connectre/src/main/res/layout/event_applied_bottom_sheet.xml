@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/event_bottom_sheet"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:orientation="vertical"
+		app:behavior_hideable="true"
+		app:behavior_peekHeight="0dp"
+		app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+	<androidx.cardview.widget.CardView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="3dp"
+			app:cardBackgroundColor="@color/white"
+			app:cardCornerRadius="12dp"
+			app:cardElevation="3dp"
+			app:cardPreventCornerOverlap="false"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/favoriteIV"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:layout_marginStart="30dp"
+					android:layout_marginTop="40dp"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:srcCompat="@drawable/ic_event_favorite" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/responseTitleTV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="30dp"
+					android:layout_marginTop="20dp"
+					android:layout_marginEnd="30dp"
+					android:lineSpacingExtra="4dp"
+					android:text="Thank you for showing interest in the event."
+					android:textColor="@color/textColorGrey"
+					android:textSize="18sp"
+					app:fontFamily="@font/sinkinsans_700bold"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/favoriteIV" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/responseDescriptionTV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="30dp"
+					android:layout_marginTop="12dp"
+					android:layout_marginEnd="20dp"
+					android:letterSpacing="0.01"
+					android:lineSpacingExtra="12sp"
+					android:text="However it is a Subscription event. We will shortly let you know if your application has been accepted. "
+					android:textColor="@color/textColorGreyAlpha80"
+					android:textSize="14sp"
+					app:fontFamily="@font/sinkinsans_400regular"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/responseTitleTV" />
+
+			<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/eventOkBtn"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:background="@color/white"
+					android:stateListAnimator="@null"
+					android:text="OK"
+					app:fontFamily="@font/sinkinsans_700bold"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/responseDescriptionTV" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

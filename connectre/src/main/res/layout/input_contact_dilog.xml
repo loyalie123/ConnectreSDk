@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+
+
+		android:layout_margin="16dp"
+		android:background="@color/white">
+
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+		<TextView
+				android:id="@+id/titleTV"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/colorPrimary"
+				android:fontFamily="@font/sinkinsans_700bold"
+				android:gravity="center"
+				android:paddingTop="16dp"
+				android:paddingBottom="16dp"
+				android:text="Input Contact Details"
+				android:textColor="@color/white"
+				android:textSize="16sp" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/nameLabelTV"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="20dp"
+				android:text="Name"
+
+				android:textColor="@color/charcoal_grey"
+				android:textSize="14sp"
+				app:fontFamily="@font/sinkinsans_500medium"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
+		<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/nameET"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="16dp"
+				android:layout_marginEnd="15dp"
+				android:background="@android:color/transparent"
+				android:hint="Enter Name "
+				android:inputType="textCapSentences"
+				android:singleLine="true"
+				android:textColor="@color/black"
+				android:textColorHint="@color/pinkish_grey"
+				android:textSize="13sp"
+				android:theme="@style/editCommonText"
+				app:fontFamily="@font/sinkinsans_500medium"
+
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/nameLabelTV" />
+
+		<View
+				android:id="@+id/nameView"
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="16dp"
+				android:layout_marginEnd="15dp"
+				android:background="@color/pinkishGrey"
+				app:layout_constraintEnd_toEndOf="@+id/nameET"
+				app:layout_constraintStart_toStartOf="@+id/nameET"
+				app:layout_constraintTop_toBottomOf="@+id/nameET" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/mobLabelTV"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginEnd="15dp"
+				android:text="Mobile Number"
+				android:textColor="@color/charcoal_grey"
+				android:textSize="14sp"
+
+				app:fontFamily="@font/sinkinsans_500medium"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/nameView" />
+
+		<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/mobET"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="16dp"
+				android:layout_marginEnd="15dp"
+				android:background="@android:color/transparent"
+				android:hint="Enter Mobile Number"
+				android:inputType="number"
+				android:singleLine="true"
+				android:textColor="@color/black"
+				android:textColorHint="@color/pinkish_grey"
+				android:textSize="13sp"
+				android:theme="@style/editCommonText"
+				android:visibility="visible"
+				app:fontFamily="@font/sinkinsans_500medium"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/mobLabelTV" />
+
+		<View
+				android:id="@+id/mobView"
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="16dp"
+				android:layout_marginEnd="15dp"
+				android:background="@color/pinkishGrey"
+				android:visibility="visible"
+				app:layout_constraintEnd_toEndOf="@+id/mobET"
+				app:layout_constraintStart_toStartOf="@+id/mobET"
+				app:layout_constraintTop_toBottomOf="@+id/mobET" />
+
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/emailLabelTV"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginEnd="15dp"
+				android:text="Email Address"
+				android:textColor="@color/charcoal_grey"
+				android:textSize="14sp"
+				app:fontFamily="@font/sinkinsans_500medium"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/mobView" />
+
+		<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/emailET"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="16dp"
+				android:layout_marginEnd="15dp"
+				android:background="@android:color/transparent"
+				android:hint="Enter Email Address (Optional)"
+				android:inputType="textEmailAddress"
+				android:singleLine="true"
+				android:textColor="@color/black"
+				android:textColorHint="@color/pinkish_grey"
+				android:textSize="13sp"
+				android:theme="@style/editCommonText"
+				app:fontFamily="@font/sinkinsans_500medium"
+
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/emailLabelTV" />
+
+		<View
+				android:id="@+id/emailView"
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="16dp"
+				android:layout_marginEnd="15dp"
+				android:background="@color/pinkishGrey"
+				app:layout_constraintEnd_toEndOf="@+id/emailET"
+				app:layout_constraintStart_toStartOf="@+id/emailET"
+				app:layout_constraintTop_toBottomOf="@+id/emailET" />
+
+		<LinearLayout
+				android:id="@+id/checkboxLayout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginTop="16dp"
+				android:layout_marginBottom="15dp"
+				android:orientation="horizontal">
+
+			<androidx.appcompat.widget.AppCompatCheckBox
+					android:id="@+id/tcCheckbox"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="15dp"
+
+					android:buttonTint="@color/black"
+					android:checked="false"
+
+					android:fontFamily="@font/sinkinsans_500medium" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/tcText"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:layout_marginStart="3dp"
+					android:layout_marginTop="5dp"
+					android:layout_marginEnd="15dp"
+
+					android:fontFamily="@font/sinkinsans_500medium"
+					android:lineSpacingExtra="4dp"
+					android:paddingBottom="15dp"
+					android:text="I agree to the Terms &amp; Conditions" />
+		</LinearLayout>
+
+		<TextView
+				android:id="@+id/commentBtn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginLeft="80dp"
+				android:layout_marginTop="20dp"
+				android:layout_marginRight="80dp"
+				android:layout_marginBottom="16dp"
+				android:background="@color/colorPrimary"
+				android:elevation="2dp"
+				android:fontFamily="@font/sinkinsans_700bold"
+				android:gravity="center"
+				android:lineSpacingExtra="4.5dp"
+				android:paddingStart="8dp"
+				android:paddingTop="12dp"
+				android:paddingEnd="8dp"
+				android:paddingBottom="12dp"
+				android:text="Submit"
+				android:textAllCaps="false"
+				android:textColor="@color/white"
+				android:textSize="16sp" />
+	</LinearLayout>
+
+</FrameLayout>

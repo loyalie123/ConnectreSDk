@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dp"
+		android:background="@drawable/rounded_corner_bg_white"
+		android:elevation="5dp"
+		android:paddingBottom="30dp">
+
+	<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/offerImage"
+			android:layout_width="68dp"
+			android:layout_height="68dp"
+			android:layout_marginTop="35dp"
+			android:src="@drawable/offer_refer"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/programTitleTV"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:paddingTop="20dp"
+			android:textSize="16sp"
+			app:fontFamily="@font/sinkinsans_500medium"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/offerImage" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/offerCodeTV"
+			android:layout_width="220dp"
+			android:layout_height="50dp"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/rectangle"
+			android:gravity="center"
+			android:text="ABVCFHHJ"
+			android:textSize="18sp"
+			app:fontFamily="@font/sinkinsans_500medium"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/programTitleTV" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/offerDescriptionTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="30dp"
+			android:layout_marginEnd="30dp"
+			android:gravity="center"
+			android:paddingTop="20dp"
+			android:textColor="@color/textColorGreyAlpha60"
+			app:fontFamily="@font/sinkinsans_400regular"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/offerCodeTV" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/offerTimeTV"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="30dp"
+			android:layout_marginEnd="30dp"
+			android:paddingTop="12dp"
+			android:text="02:30 PM"
+			android:textColor="@color/textColorGreyAlpha70"
+			app:fontFamily="@font/sinkinsans_400regular"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/offerDescriptionTV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

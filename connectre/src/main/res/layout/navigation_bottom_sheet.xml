@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/nav_bottom_sheet"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/colorAccent"
+		android:clickable="true"
+		android:orientation="vertical"
+		android:paddingTop="20dp"
+		app:behavior_hideable="true"
+		app:behavior_peekHeight="0dp"
+		app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+	<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/closeIV"
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+			android:layout_marginTop="30dp"
+			android:layout_marginEnd="20dp"
+			android:padding="5dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@drawable/ic_close_black_24dp" />
+
+	<ImageView
+			android:id="@+id/profilePlaceHolderBg"
+			android:layout_width="65dp"
+			android:layout_height="65dp"
+			android:src="@drawable/grey_disc"
+			app:layout_constraintBottom_toBottomOf="@id/profileIV"
+			app:layout_constraintEnd_toEndOf="@id/profileIV"
+			app:layout_constraintStart_toStartOf="@id/profileIV"
+			app:layout_constraintTop_toTopOf="@id/profileIV" />
+
+	<com.makeramen.roundedimageview.RoundedImageView
+			android:id="@+id/profileIV"
+			android:layout_width="65dp"
+			android:layout_height="65dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="30dp"
+			android:scaleType="centerCrop"
+			android:src="@drawable/ic_person"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:riv_oval="true" />
+
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/profileNameTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="25dp"
+			android:layout_marginTop="40dp"
+			android:ellipsize="end"
+			android:gravity="start"
+			android:singleLine="true"
+			android:textColor="#2e2e2e"
+			android:textSize="16sp"
+			app:fontFamily="@font/sinkinsans_500medium"
+			app:layout_constraintEnd_toStartOf="@id/closeIV"
+			app:layout_constraintStart_toEndOf="@+id/profileIV"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/mobileNumTV"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="25dp"
+			android:layout_marginTop="7dp"
+			android:textColor="#802e2e2e"
+			android:textSize="12sp"
+			app:fontFamily="@font/sinkinsans_500medium"
+			app:layout_constraintLeft_toRightOf="@+id/profileIV"
+			app:layout_constraintTop_toBottomOf="@+id/profileNameTV" />
+
+	<View
+			android:id="@+id/profileBg"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:background="?android:attr/selectableItemBackground"
+			app:layout_constraintBottom_toBottomOf="@id/profileIV"
+			app:layout_constraintEnd_toStartOf="@id/closeIV"
+			app:layout_constraintStart_toStartOf="@id/profileIV"
+			app:layout_constraintTop_toTopOf="@id/profileIV" />
+
+	<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/navigationRV"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginTop="30dp"
+			android:layoutAnimation="@anim/layout_animation_from_bottom"
+			app:layout_constraintBottom_toTopOf="@+id/selectView"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/profileIV" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/logoutTV"
+			android:layout_width="0dp"
+			android:layout_height="50dp"
+			android:gravity="center"
+			android:text="@string/logout"
+			android:textColor="#2e2e2e"
+			android:textSize="12sp"
+			android:visibility="gone"
+			app:fontFamily="@font/sinkinsans_500medium"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent" />
+
+	<View
+			android:id="@+id/bottomView"
+			android:layout_width="0dp"
+			android:layout_height="0.5dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginEnd="20dp"
+			android:background="#1a000000"
+			app:layout_constraintBottom_toTopOf="@+id/logoutTV"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/selectDeveloperTV"
+			android:layout_width="0dp"
+			android:layout_height="80dp"
+			android:gravity="center"
+			android:text="@string/select_developer"
+			android:textColor="#2e2e2e"
+			android:textSize="15sp"
+			android:visibility="gone"
+			app:fontFamily="@font/sinkinsans_500medium"
+			app:layout_constraintBottom_toTopOf="@+id/bottomView"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent" />
+
+	<View
+			android:id="@+id/selectView"
+			android:layout_width="0dp"
+			android:layout_height="0.5dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginEnd="20dp"
+			android:background="#1a000000"
+			app:layout_constraintBottom_toTopOf="@+id/selectDeveloperTV"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

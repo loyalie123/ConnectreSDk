@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.OverViewfragmnt">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.loyalie.connectre.custom_views.ArcProgress
+                android:id="@+id/arc"
+                android:layout_width="199dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                custom:arc_first_text_font="@font/sinkinsans_400regular"
+                custom:arc_second_text_font="@font/sinkinsans_600semibold" />
+
+            <TextView
+                android:id="@+id/arctv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sinkinsans_400regular"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@+id/arc"
+                app:layout_constraintEnd_toEndOf="@id/arc"
+                app:layout_constraintStart_toStartOf="@id/arc"
+                app:layout_constraintTop_toTopOf="@+id/arc" />
+
+            <TextView
+                android:id="@+id/arctv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/sinkinsans_600semibold"
+                android:gravity="center"
+                android:text="Amount Paid"
+                android:textColor="#bfbfbf"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/arc"
+                app:layout_constraintEnd_toEndOf="@id/arc"
+                app:layout_constraintStart_toStartOf="@id/arc"
+                app:layout_constraintTop_toTopOf="@+id/arc" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/arctv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/sinkinsans_400regular"
+                android:text="As on 20th Oct, 2020"
+                android:textColor="#595959"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/arc"
+                app:layout_constraintStart_toStartOf="@id/arc"
+                app:layout_constraintTop_toBottomOf="@+id/arctv2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/billingDetailsTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/sinkinsans_600semibold"
+                android:text="@string/billing_details"
+                android:textColor="@color/charcoal_grey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/arc" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBilling"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:overScrollMode="never"
+                android:paddingBottom="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/billingDetailsTv" />
+
+            <!--	<androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/const1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#fafafa"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/billingDetailsTv">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/agreementvalueTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/sinkinsans_500medium"
+
+                            android:text="Agreement Value"
+                            android:textColor="@color/charcoalgrey2"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/agreementValue"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/agreementValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/nunito_sans_extrabold"
+
+                            android:text="Rs 35,52000"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/agreementvalueTV"
+                            app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/const2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+
+                        android:layout_marginEnd="20dp"
+
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/const1">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/taxesTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/sinkinsans_500medium"
+
+                            android:text="Total Applicable Taxes"
+                            android:textColor="@color/charcoalgrey2"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/taxesvalueTv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/taxesvalueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/nunito_sans_extrabold"
+
+                            android:text="Rs 1,52,000"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/taxesTv"
+                            app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/const3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#fafafa"
+
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/const2">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/totalbillingTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/sinkinsans_500medium"
+
+
+                            android:text="Total Billed Value"
+                            android:textColor="@color/charcoalgrey2"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/totalbillingValueTv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/totalbillingValueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/nunito_sans_extrabold"
+
+                            android:text="Rs 30,00000"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/totalbillingTv"
+                            app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/const4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+
+                        android:layout_marginEnd="20dp"
+
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/const3">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/prinsTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/sinkinsans_500medium"
+
+                            android:text="Towards Principal"
+                            android:textColor="@color/charcoalgrey2"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/prinsvalueTv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/prinsvalueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/nunito_sans_extrabold"
+
+                            android:text="Rs 28,00000"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/prinsTv"
+                            app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/const5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#fafafa"
+
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/const2">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tdsTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/sinkinsans_500medium"
+
+
+                            android:text="Towards TDS"
+                            android:textColor="@color/charcoalgrey2"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/tdsValueTv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tdsValueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/nunito_sans_extrabold"
+
+                            android:text="Rs 50,000"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tdsTv"
+                            app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/const6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+
+                        android:layout_marginEnd="20dp"
+
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/const5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/towardstaxTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/sinkinsans_500medium"
+
+                            android:text="Towards Taxes"
+                            android:textColor="@color/charcoalgrey2"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/towardsvalueTv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/towardsvalueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/nunito_sans_extrabold"
+
+                            android:text="Rs 25,000"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/towardstaxTv"
+                            app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/const7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#fafafa"
+
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/const6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tdsTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/sinkinsans_500medium"
+
+
+                            android:text="Towards Interest"
+                            android:textColor="@color/charcoalgrey2"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/tdsValueTv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tdsValueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/nunito_sans_extrabold"
+
+                            android:text="Rs 50,000"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tdsTv"
+                            app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/paymentDetailsTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/sinkinsans_600semibold"
+                android:text="Payment Details"
+                android:textColor="@color/charcoal_grey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvBilling" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPayment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paymentDetailsTv" />
+            <!--		<androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constPay1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="#fafafa"
+                            android:padding="5dp"
+                            app:layout_constraintTop_toBottomOf="@+id/paymentDetailsTv">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/amountReceivedtv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/sinkinsans_500medium"
+
+
+                                android:text="Amount Received"
+                                android:textColor="@color/charcoalgrey2"
+                                android:textSize="11sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/amntReceivedValuetv"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+
+                                />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/amntReceivedValuetv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:fontFamily="@font/nunito_sans_extrabold"
+
+                                android:text="Rs 20,56,250"
+                                android:textColor="#0088cf"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/amountReceivedtv"
+                                app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constPay2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+
+                            android:layout_marginEnd="20dp"
+
+                            android:padding="5dp"
+                            app:layout_constraintTop_toBottomOf="@+id/constPay1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tdsrecTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/sinkinsans_500medium"
+
+
+                                android:text="TDS Received"
+                                android:textColor="@color/charcoalgrey2"
+                                android:textSize="11sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/tdsRecValueTV"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+
+                                />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tdsRecValueTV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:fontFamily="@font/nunito_sans_extrabold"
+
+                                android:text="Rs 20,56,250"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/tdsrecTv"
+                                app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constPay3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="#fafafa"
+
+                            android:padding="5dp"
+                            app:layout_constraintTop_toBottomOf="@+id/constPay2">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/amntDueTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/sinkinsans_500medium"
+
+
+                                android:text="Amount Due"
+                                android:textColor="@color/charcoalgrey2"
+                                android:textSize="11sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/amntDueValueTv"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+
+                                />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/amntDueValueTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:fontFamily="@font/nunito_sans_extrabold"
+
+                                android:text="Rs 2,112,500"
+                                android:textColor="#ea2c00"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/amntDueTv"
+                                app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/contPay4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+
+                            android:layout_marginEnd="20dp"
+
+                            android:padding="5dp"
+                            app:layout_constraintTop_toBottomOf="@+id/constPay3">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tPayableTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/sinkinsans_500medium"
+
+
+                                android:text="Total Payable Value"
+                                android:textColor="@color/charcoalgrey2"
+                                android:textSize="11sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/tPayableValueTv"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+
+                                />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tPayableValueTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:fontFamily="@font/nunito_sans_extrabold"
+
+                                android:text="Rs 20,56,250"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/tPayableTv"
+                                app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+        -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/showMoreTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableEnd="@drawable/ic_arrow_point_to_right"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/sinkinsans_400regular"
+                android:gravity="center"
+                android:text="Show More"
+                android:textSize="13sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvPayment" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constDownload"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="19dp"
+                android:background="@drawable/black_fullrounded_corner"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/showMoreTv">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/downloadTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:drawableStart="@drawable/ic_surface_white"
+                    android:drawablePadding="11dp"
+                    android:fontFamily="@font/sinkinsans_300light"
+                    android:text="Download Account Statement"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/upcomingTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/sinkinsans_600semibold"
+                android:text="Upcoming Payment"
+                android:textColor="@color/charcoal_grey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constDownload" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constUpcoming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/round_corner_withborder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upcomingTv">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/titleUpcoming"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/sinkinsans_400regular"
+                    android:lineSpacingExtra="2.5dp"
+                    android:maxLines="2"
+                    android:text="Within 55 days of allotment of the milestone"
+                    android:textColor="@color/charcoal_grey"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@id/paymdueTv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/paymdueTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="14dp"
+                    android:fontFamily="@font/sinkinsans_400regular"
+                    android:gravity="end"
+                    android:text="Payment due"
+
+                    android:textColor="#66000000"
+
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/titleUpcoming"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/valueUpcoming"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/nunito_sans_extrabold"
+                    android:text="Rs 0"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleUpcoming" />
+
+                <TextView
+                    android:id="@+id/inctax"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/sinkinsans_400regular"
+                    android:text="Inc Tax"
+                    android:textColor="#80303e47"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toStartOf="@+id/paymdueValueTv"
+                    app:layout_constraintStart_toEndOf="@+id/valueUpcoming"
+                    app:layout_constraintTop_toBottomOf="@+id/titleUpcoming" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/paymdueValueTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:fontFamily="@font/sinkinsans_400regular"
+                    android:gravity="end"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingBottom="16dp"
+                    android:text="12 June, 2020"
+                    android:textColor="#66000000"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/inctax"
+                    app:layout_constraintTop_toBottomOf="@+id/titleUpcoming" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/helpTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+
+                android:fontFamily="@font/sinkinsans_500medium"
+                android:gravity="end"
+                android:text="Need Help?  "
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@id/supportTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constUpcoming" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/supportTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/sinkinsans_500medium"
+                android:paddingBottom="16dp"
+                android:text="Contact Support"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/helpTv"
+                app:layout_constraintTop_toBottomOf="@+id/constUpcoming" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/greivncTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+
+                android:fontFamily="@font/sinkinsans_500medium"
+                android:gravity="center"
+                android:paddingBottom="25dp"
+                android:text="Feedback/Grievances"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/helpTv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

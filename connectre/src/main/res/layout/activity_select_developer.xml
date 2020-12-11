@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/root_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:animateLayoutChanges="false"
+		android:background="@color/lightestGrey"
+		android:fitsSystemWindows="true"
+		tools:context=".ui.developers.SelectDeveloperActivity">
+
+	<FrameLayout
+			android:id="@+id/rootayout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+
+			>
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+			<TextView
+					android:id="@+id/selectLabelTV"
+					style="@style/UbuntuMediumText"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_margin="20dp"
+					android:paddingBottom="16dp"
+					android:text="@string/select_developer"
+					android:textColor="@color/textColorDark"
+					android:textSize="16sp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+			<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/developerRV"
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:clipToPadding="false"
+					android:overScrollMode="never"
+					android:paddingBottom="20dp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@id/selectLabelTV" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</FrameLayout>
+
+
+	<TextView
+			android:id="@+id/reloadBtn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@color/colorPrimary"
+			android:elevation="4dp"
+			android:fontFamily="@font/sinkinsans_700bold"
+			android:paddingStart="24dp"
+			android:paddingTop="8dp"
+			android:paddingEnd="24dp"
+			android:paddingBottom="8dp"
+			android:text="Reload"
+			android:textColor="@color/white"
+			android:textSize="14sp"
+			android:visibility="gone"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+
+		android:paddingBottom="25dp"
+		tools:context=".ui.rewards.BenefitsDetailAct">
+
+
+	<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+
+			app:layout_constraintTop_toTopOf="parent">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<include
+					android:id="@+id/rewardToolbar"
+					layout="@layout/center_title_toolbar" />
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+					android:id="@+id/topConstraint"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+
+					android:background="#f1f1f1"
+					android:paddingBottom="26dp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+
+					app:layout_constraintTop_toBottomOf="@+id/rewardToolbar">
+
+				<androidx.appcompat.widget.AppCompatImageView
+						android:id="@+id/rewardIV"
+						android:layout_width="109dp"
+						android:layout_height="96dp"
+						android:layout_marginStart="26dp"
+						android:layout_marginTop="26dp"
+
+						android:src="@drawable/lead_dummy"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+				<TextView
+						android:id="@+id/rewardNameTV"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="15dp"
+						android:layout_marginEnd="20dp"
+						android:ellipsize="end"
+						android:fontFamily="@font/sinkinsans_700bold"
+						android:lineSpacingExtra="4dp"
+						android:maxLines="2"
+						android:textColor="@color/black"
+						android:textSize="14sp"
+						app:layout_constraintBottom_toTopOf="@id/programNameTV"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toEndOf="@id/rewardIV"
+						app:layout_constraintTop_toTopOf="@id/rewardIV" />
+
+				<TextView
+						android:id="@+id/programNameTV"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="15dp"
+						android:layout_marginTop="4dp"
+						android:layout_marginEnd="20dp"
+						android:ellipsize="end"
+						android:fontFamily="@font/sinkinsans_400regular"
+						android:lineSpacingExtra="4dp"
+						android:maxLines="2"
+						android:text="mhjghjgjjg gjgjjgjgj"
+						android:textColor="@color/greyText"
+						android:textSize="12sp"
+						app:layout_constraintStart_toEndOf="@id/rewardIV"
+						app:layout_constraintTop_toBottomOf="@id/rewardNameTV" />
+
+
+				<TextView
+						android:id="@+id/expiryDateTV"
+						android:layout_width="70dp"
+
+						android:layout_height="wrap_content"
+						android:layout_marginStart="15dp"
+						android:layout_marginTop="13dp"
+						android:fontFamily="@font/sinkinsans_700bold"
+						android:lineSpacingExtra="4dp"
+						android:text="Validity:  "
+						android:textColor="@color/black"
+						android:textSize="12sp"
+						app:layout_constraintEnd_toStartOf="@+id/benfitExpiryDateTV"
+						app:layout_constraintStart_toEndOf="@id/rewardIV"
+						app:layout_constraintTop_toBottomOf="@id/programNameTV" />
+
+				<TextView
+						android:id="@+id/benfitExpiryDateTV"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="13dp"
+						android:layout_marginEnd="20dp"
+						android:layout_marginBottom="10dp"
+						android:ellipsize="end"
+						android:fontFamily="@font/sinkinsans_700bold"
+						android:lineSpacingExtra="4dp"
+						android:maxLines="2"
+						android:textColor="@color/greyrewards"
+						android:textSize="12sp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toEndOf="@id/expiryDateTV"
+						app:layout_constraintTop_toBottomOf="@id/programNameTV" />
+
+				<TextView
+						android:id="@+id/rewardCodeTV"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="15dp"
+						android:layout_marginTop="15dp"
+						android:layout_marginEnd="20dp"
+						android:background="@drawable/grey_dashed_rect"
+						android:fontFamily="@font/sinkinsans_400regular"
+						android:gravity="center"
+						android:lineSpacingExtra="4dp"
+						android:padding="8dp"
+						android:text="MAH 2015"
+						android:textColor="@color/colorPrimary"
+						android:textSize="12sp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/benfitExpiryDateTV" />
+
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/redemptionTV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="18dp"
+					android:layout_marginTop="25dp"
+					android:fontFamily="@font/sinkinsans_700bold"
+					android:text="Redemption Process"
+					android:textColor="@color/colorPrimary"
+					android:textSize="14sp"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/topConstraint" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/redemptionDetialTV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="18dp"
+					android:layout_marginTop="11dp"
+					android:layout_marginEnd="18dp"
+					android:fontFamily="@font/sinkinsans_400regular"
+					android:lineSpacingExtra="6dp"
+					android:text="@string/redemption_detail"
+					android:textColor="#7d7d7d"
+
+					android:textSize="12sp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/redemptionTV" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/termsTV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="18dp"
+					android:layout_marginTop="20dp"
+					android:fontFamily="@font/sinkinsans_700bold"
+					android:text="Terms &amp; Conditions"
+					android:textColor="@color/colorPrimary"
+					android:textSize="14sp"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/redemptionDetialTV" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/termsDetailTV"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="18dp"
+					android:layout_marginTop="11dp"
+					android:layout_marginEnd="18dp"
+					android:fontFamily="@font/sinkinsans_400regular"
+					android:lineSpacingExtra="6dp"
+					android:text="@string/redemption_detail"
+					android:textColor="#7d7d7d"
+					android:textSize="12sp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/termsTV" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+	</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

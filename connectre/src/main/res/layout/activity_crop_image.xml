@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".ui.profile.CropImageActivity">
+
+	<View
+			android:id="@+id/closeBtn"
+			android:layout_width="0dp"
+			android:layout_height="50dp"
+			android:background="#71339D"
+		app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toLeftOf="@id/okBtn" />
+
+	<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/closeIV"
+			android:layout_width="28dp"
+			android:layout_height="28dp"
+			app:layout_constraintBottom_toBottomOf="@id/closeBtn"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintLeft_toLeftOf="@id/closeBtn"
+			app:layout_constraintRight_toLeftOf="@id/closeTV"
+			app:layout_constraintTop_toTopOf="@id/closeBtn"
+			app:srcCompat="@drawable/ic_close_black_24dp" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/closeTV"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="8dp"
+			android:fontFamily="@font/sinkinsans_700bold"
+			android:text="Close"
+			android:textColor="@android:color/white"
+			app:layout_constraintBottom_toBottomOf="@id/closeBtn"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintLeft_toRightOf="@id/closeIV"
+			app:layout_constraintRight_toRightOf="@id/closeBtn"
+			app:layout_constraintTop_toTopOf="@id/closeBtn" />
+
+
+	<View
+			android:id="@+id/okBtn"
+			android:layout_width="0dp"
+			android:layout_height="50dp"
+			android:background="#71339D"
+		app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintLeft_toRightOf="@id/closeBtn"
+			app:layout_constraintRight_toRightOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/okIV"
+			android:layout_width="28dp"
+			android:layout_height="28dp"
+			app:layout_constraintBottom_toBottomOf="@id/okBtn"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintLeft_toLeftOf="@id/okBtn"
+			app:layout_constraintRight_toLeftOf="@id/okTV"
+			app:layout_constraintTop_toTopOf="@id/okBtn"
+			app:srcCompat="@drawable/ic_done_white_24dp"
+
+			/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/okTV"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="8dp"
+			android:fontFamily="@font/sinkinsans_500medium"
+			android:text="OK"
+			android:textColor="@android:color/white"
+			app:layout_constraintBottom_toBottomOf="@id/okBtn"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintLeft_toRightOf="@id/okIV"
+			app:layout_constraintRight_toRightOf="@id/okBtn"
+			app:layout_constraintTop_toTopOf="@id/okBtn" />
+
+	<View
+			android:id="@+id/divider"
+			android:layout_width="1dp"
+			android:layout_height="50dp"
+			android:background="@android:color/white"
+		app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintLeft_toRightOf="@id/closeBtn" />
+
+	<com.theartofdev.edmodo.cropper.CropImageView xmlns:custom="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/cropImageView"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			custom:cropAspectRatioX="1"
+			custom:cropAspectRatioY="1"
+			custom:cropFixAspectRatio="true"
+			custom:layout_constraintBottom_toBottomOf="parent"
+			custom:layout_constraintLeft_toLeftOf="parent"
+			custom:layout_constraintRight_toRightOf="parent"
+			custom:layout_constraintTop_toBottomOf="@id/closeBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

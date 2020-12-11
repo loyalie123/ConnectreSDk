@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:custom="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".ui.project.ProjectActivity">
+
+	<include
+			android:id="@+id/projectToolbar"
+			layout="@layout/center_title_toolbar" />
+
+	<com.loyalie.connectre.util.CustomTabLayout
+			android:id="@+id/tab_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#71339D"
+			android:visibility="gone"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/projectToolbar"
+			app:tabSelectedTextColor="@android:color/white"
+			app:tabTextColor="#80ffffff"
+			custom:ddAnimatedIndicator="dachshund"
+			custom:ddIndicatorColor="@android:color/white"
+			custom:ddIndicatorHeight="10dp"
+			custom:tabMode="scrollable"
+			custom:tabTextAppearance="@style/TabLayoutTextAppearance" />
+
+	<androidx.viewpager.widget.ViewPager
+			android:id="@+id/projectVP"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/tab_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

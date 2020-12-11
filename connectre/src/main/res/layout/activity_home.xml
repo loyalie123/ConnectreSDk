@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/home_main"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#eeeded"
+		android:fitsSystemWindows="true"
+		android:orientation="vertical"
+		tools:context=".ui.home.HomeActivity">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		<View
+				android:id="@+id/homeToolbar"
+				android:layout_width="0dp"
+				android:layout_height="?android:attr/actionBarSize"
+				android:elevation="2dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:id="@+id/ic_home_hamburger"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="16dp"
+				android:background="?android:attr/selectableItemBackground"
+				android:elevation="2dp"
+				app:layout_constraintBottom_toBottomOf="@id/homeToolbar"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="@id/homeToolbar"
+				app:srcCompat="@drawable/ic_hamburger" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:elevation="2dp"
+				android:gravity="center"
+				android:text="CLUB BENEFIQUE"
+
+				android:textColor="#D4AF37"
+				android:textSize="16sp"
+				app:fontFamily="@font/audrey_medium"
+				app:layout_constraintBottom_toBottomOf="@id/homeToolbar"
+				app:layout_constraintEnd_toStartOf="@+id/notiIV"
+				app:layout_constraintStart_toEndOf="@+id/ic_home_hamburger"
+				app:layout_constraintTop_toTopOf="parent" />
+		<!--	<androidx.appcompat.widget.AppCompatImageView
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:gravity="center"
+					android:src="@drawable/connectre_logo"
+					app:layout_constraintBottom_toBottomOf="@id/homeToolbar"
+
+
+					app:layout_constraintEnd_toStartOf="@+id/notiIV"
+					app:layout_constraintStart_toEndOf="@+id/ic_home_hamburger"
+					app:layout_constraintTop_toTopOf="parent" />
+	-->
+		<androidx.appcompat.widget.AppCompatImageView
+				android:id="@+id/notiIV"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="16dp"
+				android:background="?android:attr/selectableItemBackground"
+				android:elevation="2dp"
+				app:layout_constraintBottom_toBottomOf="@id/homeToolbar"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="@id/homeToolbar"
+				app:srcCompat="@drawable/ic_bell" />
+
+		<View
+				android:id="@+id/unreadIndicator"
+				android:layout_width="8dp"
+				android:layout_height="8dp"
+				android:layout_gravity="end|top"
+				android:layout_margin="2dp"
+				android:background="@drawable/white_bubble"
+				android:elevation="3dp"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="@id/notiIV"
+				app:layout_constraintTop_toTopOf="@id/notiIV" />
+
+		<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+				android:id="@+id/swipeRL"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+
+				android:clipToPadding="false"
+				android:paddingBottom="70dp"
+
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/homeToolbar">
+
+			<androidx.core.widget.NestedScrollView
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+
+					android:clipToPadding="false"
+
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent">
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+
+						android:descendantFocusability="blocksDescendants">
+
+					<androidx.constraintlayout.widget.ConstraintLayout
+							android:id="@+id/mainLayout"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:background="@color/white"
+							app:layout_constraintTop_toTopOf="parent">
+
+						<androidx.viewpager.widget.ViewPager
+								android:id="@+id/devImgVP"
+								android:layout_width="0dp"
+								android:layout_height="0dp"
+								app:layout_constraintDimensionRatio="H,2:1"
+								app:layout_constraintLeft_toLeftOf="parent"
+								app:layout_constraintRight_toRightOf="parent"
+								app:layout_constraintTop_toTopOf="parent" />
+
+						<com.loyalie.connectre.util.CircleIndicator
+								android:id="@+id/indicator"
+								android:layout_width="wrap_content"
+								android:layout_height="28dp"
+								android:background="@color/white"
+								android:visibility="gone"
+								app:ci_drawable="@drawable/hint_color_indicator"
+								app:ci_drawable_unselected="@drawable/hint_color_light_indicator"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toBottomOf="@+id/devImgVP" />
+						<!--	<WebView
+									android:layout_width="0dp"
+									android:layout_height="50dp"
+									android:id="@+id/marqueText"
+									android:layout_marginTop="5dp"
+									android:background="@color/white"
+
+									android:fadingEdge="horizontal"
+									android:gravity="center"
+
+									android:fontFamily="@font/sinkinsans_700bold"
+
+									android:padding="4dp"
+
+
+									android:text="This program is managed by Loyalie"
+									android:textAlignment="center"
+
+									android:textColor="#000000"
+									android:textSize="14sp"
+									app:layout_constraintEnd_toEndOf="parent"
+									app:layout_constraintStart_toStartOf="parent"
+									app:layout_constraintTop_toBottomOf="@id/indicator"
+									android:singleLine="true"
+									android:ellipsize="marquee"
+									android:marqueeRepeatLimit="marquee_forever"
+									android:scrollHorizontally="true"
+									android:paddingLeft="15dip"
+									android:paddingRight="15dip"
+									android:focusable="true"
+									android:focusableInTouchMode="true"
+									android:freezesText="true"
+									></WebView>-->
+						<androidx.constraintlayout.widget.ConstraintLayout
+								android:id="@+id/con_marque"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+
+								android:layout_marginBottom="2dp"
+								android:background="@color/white"
+								android:padding="4dp"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toBottomOf="@id/indicator">
+
+							<androidx.appcompat.widget.AppCompatTextView
+									android:id="@+id/marqueText"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:background="@color/white"
+
+									android:ellipsize="marquee"
+									android:focusable="true"
+
+									android:focusableInTouchMode="true"
+									android:fontFamily="@font/sinkinsans_700bold"
+
+									android:freezesText="true"
+
+
+									android:gravity="center"
+									android:marqueeRepeatLimit="marquee_forever"
+
+
+									android:scrollHorizontally="true"
+									android:singleLine="true"
+
+									android:textAlignment="center"
+									android:textColor="#000000"
+									android:textSize="14sp"
+									app:layout_constraintEnd_toEndOf="parent"
+									app:layout_constraintStart_toStartOf="parent"
+									app:layout_constraintTop_toTopOf="parent" />
+						</androidx.constraintlayout.widget.ConstraintLayout>
+
+					</androidx.constraintlayout.widget.ConstraintLayout>
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/propertyTv"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="25dp"
+							android:layout_marginTop="20dp"
+							android:text="MY PROPERTY"
+							android:textColor="#242424"
+							android:textSize="14sp"
+							android:visibility="visible"
+							app:fontFamily="@font/sinkinsans_700bold"
+							app:layout_constraintLeft_toLeftOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/mainLayout" />
+
+					<androidx.recyclerview.widget.RecyclerView
+							android:id="@+id/propertyRv"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="8dp"
+							android:clipToPadding="false"
+							android:paddingStart="22dp"
+							android:paddingEnd="22dp"
+							android:visibility="visible"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/propertyTv" />
+
+					<androidx.recyclerview.widget.RecyclerView
+							android:id="@+id/allProjectsRV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+
+							android:clipToPadding="false"
+							android:paddingStart="22dp"
+							android:paddingEnd="22dp"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/propertyRv" />
+
+					<!--	<androidx.appcompat.widget.AppCompatTextView
+								android:id="@+id/projectsTV"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="25dp"
+								android:layout_marginTop="15dp"
+								android:text="@string/projects"
+								android:textColor="#242424"
+								android:textSize="14sp"
+								app:fontFamily="@font/sinkinsans_700bold"
+								app:layout_constraintLeft_toLeftOf="parent"
+								app:layout_constraintTop_toBottomOf="@+id/indicator" />
+
+						<androidx.recyclerview.widget.RecyclerView
+								android:id="@+id/projectsRV"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="8dp"
+								android:clipToPadding="false"
+								android:paddingStart="22dp"
+								android:paddingEnd="22dp"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toBottomOf="@+id/projectsTV" />
+		-->
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/eventsTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="25dp"
+							android:layout_marginTop="15dp"
+							android:text="@string/events"
+							android:textColor="#242424"
+							android:textSize="14sp"
+							android:visibility="visible"
+							app:fontFamily="@font/sinkinsans_700bold"
+							app:layout_constraintLeft_toLeftOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/allProjectsRV" />
+
+					<androidx.recyclerview.widget.RecyclerView
+							android:id="@+id/eventsRV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="8dp"
+							android:clipToPadding="false"
+							android:paddingStart="22dp"
+							android:visibility="visible"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/eventsTV" />
+
+
+					<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/footerTV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="25dp"
+							android:layout_marginTop="15dp"
+							android:text="@string/exclusive_offer"
+							android:textColor="#242424"
+							android:textSize="14sp"
+							android:visibility="visible"
+							app:fontFamily="@font/sinkinsans_700bold"
+							app:layout_constraintLeft_toLeftOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/eventsRV" />
+
+					<androidx.recyclerview.widget.RecyclerView
+							android:id="@+id/bottomBannerRV"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="15dp"
+							android:layout_marginBottom="5dp"
+							android:clipToPadding="false"
+							android:paddingStart="22dp"
+							android:paddingEnd="22dp"
+							android:paddingBottom="55dp"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/footerTV" />
+
+					<!--<androidx.appcompat.widget.AppCompatTextView-->
+					<!--android:id="@+id/feedsTV"-->
+					<!--android:layout_width="0dp"-->
+					<!--android:layout_height="wrap_content"-->
+					<!--android:text="@string/feeds"-->
+					<!--android:textSize="16sp"-->
+					<!--android:textColor="#242424"-->
+					<!--android:layout_marginTop="15dp"-->
+					<!--app:fontFamily="@font/ubuntu_bold"-->
+					<!--android:layout_marginStart="25dp"-->
+					<!--app:layout_constraintLeft_toLeftOf="parent"-->
+					<!--app:layout_constraintTop_toBottomOf="@+id/eventsRV"/>-->
+
+					<!--<androidx.recyclerview.widget.RecyclerView-->
+					<!--android:id="@+id/feedsGridRV"-->
+					<!--android:layout_width="0dp"-->
+					<!--android:layout_height="wrap_content"-->
+					<!--app:layout_constraintStart_toStartOf="parent"-->
+					<!--app:layout_constraintEnd_toEndOf="parent"-->
+					<!--android:paddingStart="22dp"-->
+					<!--android:clipToPadding="false"-->
+					<!--android:layout_marginTop="5dp"-->
+					<!--app:layout_constraintTop_toBottomOf="@+id/feedsTV"/>-->
+
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+			</androidx.core.widget.NestedScrollView>
+
+		</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+		<View
+				android:id="@+id/bottomView"
+				android:layout_width="0dp"
+				android:layout_height="55dp"
+				android:background="@color/colorAccent"
+				android:elevation="2dp"
+				android:visibility="visible"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="parent" />
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/feedbackCL"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:background="?android:attr/selectableItemBackground"
+				android:elevation="4dp"
+				android:visibility="gone"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@+id/rewardsCL"
+				app:layout_constraintStart_toStartOf="parent">
+
+			<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/feedBtn"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:srcCompat="@drawable/btm_feedback" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/feedbackTV"
+					style="@style/UbuntuMediumText"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_marginBottom="5dp"
+					android:elevation="4dp"
+					android:gravity="center"
+					android:text="@string/feedback"
+					android:textColor="#242424"
+					android:textSize="10sp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/feedBtn"
+
+					/>
+
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<View
+				android:id="@+id/phnBtn"
+				android:layout_width="58dp"
+				android:layout_height="58dp"
+				android:layout_marginBottom="40dp"
+				android:background="@drawable/brick_blue_bubble"
+				android:elevation="4dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@id/leadsCL"
+				app:layout_constraintHorizontal_chainStyle="spread_inside"
+				app:layout_constraintStart_toEndOf="@id/rewardsCL"
+				app:layout_constraintTop_toTopOf="@id/bottomView" />
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:layout_width="33dp"
+				android:layout_height="34dp"
+				android:elevation="4dp"
+				app:layout_constraintBottom_toBottomOf="@+id/phnBtn"
+				app:layout_constraintEnd_toEndOf="@+id/phnBtn"
+				app:layout_constraintStart_toStartOf="@+id/phnBtn"
+				app:layout_constraintTop_toTopOf="@+id/phnBtn"
+				app:srcCompat="@drawable/btm_phone" />
+
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/rewardsCL"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:background="?android:attr/selectableItemBackground"
+				android:elevation="4dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@+id/phnBtn"
+				app:layout_constraintStart_toEndOf="@+id/feedbackCL">
+
+			<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/rewardsBtn"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:srcCompat="@drawable/btm_rewards" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/rewardsTV"
+					style="@style/UbuntuMediumText"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_marginBottom="5dp"
+					android:elevation="4dp"
+					android:gravity="center"
+					android:text="REWARDS"
+					android:textColor="#242424"
+					android:textSize="10sp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/rewardsBtn"
+
+					/>
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/leadsCL"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:background="?android:attr/selectableItemBackground"
+				android:elevation="4dp"
+				android:visibility="gone"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@+id/referCL"
+				app:layout_constraintStart_toEndOf="@+id/phnBtn">
+
+			<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/leadsBtn"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:srcCompat="@drawable/btm_lead" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/leadsTV"
+					style="@style/UbuntuMediumText"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_marginBottom="5dp"
+					android:elevation="4dp"
+					android:gravity="center"
+					android:text="LEADS"
+					android:textColor="#242424"
+					android:textSize="10sp"
+					app:layout_constraintBottom_toBottomOf="parent"
+
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/leadsBtn"
+
+					/>
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/referCL"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:background="?android:attr/selectableItemBackground"
+				android:elevation="4dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/leadsCL">
+
+			<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/referBtn"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:srcCompat="@drawable/btm_refer" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/referTV"
+					style="@style/UbuntuMediumText"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_marginBottom="5dp"
+					android:elevation="4dp"
+					android:gravity="center"
+					android:text="REFER NOW"
+					android:textColor="#242424"
+					android:textSize="10sp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/referBtn"
+
+					/>
+
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<include layout="@layout/navigation_bottom_sheet" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
