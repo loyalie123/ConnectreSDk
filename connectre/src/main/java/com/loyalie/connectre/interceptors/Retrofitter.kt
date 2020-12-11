@@ -96,10 +96,10 @@ object Retrofitter  {
             var request = chain.request()
             request = request?.newBuilder()
                 ?.addHeader("Accept", "application/json")
-                ?.addHeader("sec_key", ConnectReApp.instance.getApiToken())
+                ?.addHeader("sec_key", /*ConnectReApp.instance.getApiToken()*/"aguu2Hw1P5QWMN6Vg1xlf/mFlpb+Gj248/+bhTvHryE=")
                 ?.addHeader("Content-Type","application/x-www-form-urlencoded")
                 ?.build()
-Log.d("OkHttp",request.toString())
+
             return chain.proceed(request)
         }
     }
