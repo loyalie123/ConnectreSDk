@@ -15,7 +15,7 @@ class HeaderInterceptor @Inject constructor(private val pref: PreferenceStorage)
             ?.addHeader("sec_key",/* pref.authToken*/"aguu2Hw1P5QWMN6Vg1xlf/mFlpb+Gj248/+bhTvHryE=")
 
             ?.build()
-        Log.d("OkHttp",request.toString())
+//        Log.d("OkHttp",request.toString())
         return chain.proceed(request)
     }
 }

@@ -101,7 +101,7 @@ class AppModule {
     fun httpLoggingInterceptor(): HttpLoggingInterceptor {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
-        Log.d("OkHttp", logging.toString())
+//        Log.d("OkHttp", logging.toString())
         return logging
     }
 

@@ -32,7 +32,7 @@ class DecryptionInterceptor ( private val mDecryptionStrategy: CryptoStrategy?)
                     val responseStr = response!!.peekBody(bufferSize.toLong())?.string()/*"AWByFWNIdtFrUerLSMLrEpUF2wXOrEEoLLB8E7XVNlWB0c4CDUas8WV9u8zfl/qBzEDQ5pLThilR+O/+IOyIj6ZgpM/rsLey2r8Tl8sOPDC8N1DKZKwzbe5CX2g9vhTFc1LbYZQtPuQqTt++uNlRmebMAWNp+o0Zg/+LuhSCLXveOesOXhT0DOuerm1khrJQVeT+nHYuD4lgOw9sfHd4yc1c3G6mhneGyiHnRD1m74MM1jBN4AhD1ujDrLVSSgndHlKb9cRnO/5d2r2eBf0EYw=="*/
 //                    val responseBody = response!!.body()
 //                    val responseStr =  response?.peekBody(2048)?.string()
-            Log.d("OkHtResponse",responseStr!!)
+//            Log.d("OkHtResponse",responseStr!!)
                     v1 = "72e?5ve#7fa4*exi" ?: ""
                     var decryptedString: String = ""
                     if (mDecryptionStrategy != null) {
@@ -46,8 +46,8 @@ class DecryptionInterceptor ( private val mDecryptionStrategy: CryptoStrategy?)
                         } catch (e: Exception) {
                             e.printStackTrace()
                         }
-                        Log.d("OkHResponse=> %s", responseStr)
-                        Log.d("OkHDecrypted BODY", "" + decryptedString);
+//                        Log.d("OkHResponse=> %s", responseStr)
+//                        Log.d("OkHDecrypted BODY", "" + decryptedString);
                     } else {
 //                        throw IllegalArgumentException("No decryption strategy!")
                         decryptedString = ""

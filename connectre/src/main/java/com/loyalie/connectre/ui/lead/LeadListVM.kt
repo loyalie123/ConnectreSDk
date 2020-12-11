@@ -31,7 +31,7 @@ class LeadListVM @Inject constructor(
         } else {
             if (totalCount == programs.size) return
         }
-        val disposable = repository.getAssociatedPrograms(vendorId, offset)
+        val disposable = repository.getAssociatedPrograms("4", offset)
             .observeOn(scheduler.main)
             .doOnSubscribe { _programHolder.postValue(ViewState.Loading(isInitial, isRefresh)) }
             .subscribe({
