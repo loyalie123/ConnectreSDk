@@ -14,7 +14,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.loyalie.connectre.R
 import com.loyalie.connectre.data.PreferenceStorage
-import com.loyalie.connectre.ui.splash.SplashActivity
+import com.loyalie.connectre.ui.home.HomeActivity
 import org.json.JSONObject
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -69,7 +69,7 @@ class PushNotification @Inject constructor(
                            }
 
                            else -> {*/
-                    val dataIntent = Intent(context, SplashActivity::class.java).apply {
+                    val dataIntent = Intent(context, HomeActivity::class.java).apply {
                         flags = (Intent.FLAG_ACTIVITY_CLEAR_TOP
                                 or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                 or Intent.FLAG_ACTIVITY_SINGLE_TOP

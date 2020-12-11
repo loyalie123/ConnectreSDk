@@ -13,7 +13,6 @@ import com.loyalie.connectre.custom_views.LoadingDialog
 import com.loyalie.connectre.custom_views.MultiSelectionSpinner
 import com.loyalie.connectre.data.ProjectItem
 import com.loyalie.connectre.data.ViewState
-import com.loyalie.connectre.ui.enter_phn.EnterPhoneNumberActivity
 import com.loyalie.connectre.util.*
 import kotlinx.android.synthetic.main.activity_reg_customer.*
 import kotlinx.android.synthetic.main.center_title_toolbar.*
@@ -217,7 +216,7 @@ class RegCustomerAct : BaseActivity(), View.OnClickListener,
                 if (alertDialog.isShowing()) {
                     alertDialog.dismiss()
                     this@RegCustomerAct.finish()
-                    EnterPhoneNumberActivity.start(this@RegCustomerAct, false, true, false)
+//                    EnterPhoneNumberActivity.start(this@RegCustomerAct, false, true, false)
                 }
             }
         }

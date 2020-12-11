@@ -29,7 +29,6 @@ import com.google.android.material.tabs.TabLayout
 import com.loyalie.connectre.R
 import com.loyalie.connectre.custom_views.SafeClickListener
 import com.loyalie.connectre.data.PreferenceStorage
-import com.loyalie.connectre.ui.enter_phn.EnterPhoneNumberActivity
 import com.loyalie.connectre.widget.Toasty
 import com.squareup.picasso.Picasso
 import java.text.ParseException
@@ -107,7 +106,7 @@ fun Context.sendEmail(emailId: String) {
 
 fun Context.logout(preferenceStorage: PreferenceStorage, isAuthFail: Boolean) {
     preferenceStorage.clearAll()
-    EnterPhoneNumberActivity.start(this, isAuthFail, true, false)
+//    EnterPhoneNumberActivity.start(this, isAuthFail, true, false)
 }
 
 fun View.showKeyboard() {

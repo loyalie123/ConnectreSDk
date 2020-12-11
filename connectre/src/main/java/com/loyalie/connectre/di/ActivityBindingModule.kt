@@ -10,7 +10,6 @@ import com.loyalie.connectre.ui.dashboard.DashboardModule
 import com.loyalie.connectre.ui.developers.SelectDeveloperActivity
 import com.loyalie.connectre.ui.developers.SelectDeveloperModule
 import com.loyalie.connectre.ui.enter_phn.EnterPhoneModule
-import com.loyalie.connectre.ui.enter_phn.EnterPhoneNumberActivity
 import com.loyalie.connectre.ui.event.EventActivity
 import com.loyalie.connectre.ui.event.EventModule
 import com.loyalie.connectre.ui.faq.FAQActivity
@@ -46,7 +45,7 @@ import com.loyalie.connectre.ui.rewards.BenefitsDetailAct
 import com.loyalie.connectre.ui.rewards.NotiLeadsActivity
 import com.loyalie.connectre.ui.rewards.RewardsActivity
 import com.loyalie.connectre.ui.rewards.RewardsModule
-import com.loyalie.connectre.ui.splash.SplashActivity
+
 import com.loyalie.connectre.ui.tutorial.TutorialListingActivity
 import com.loyalie.connectre.ui.tutorial.TutorialsListingModule
 import com.loyalie.connectre.ui.tutorial.details.TutorialDetailsActivity
@@ -56,8 +55,8 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class ActivityBindingModule {
 
-    @ContributesAndroidInjector(modules = [EnterPhoneModule::class])
-    internal abstract fun enterPhoneActivity(): EnterPhoneNumberActivity
+  /*  @ContributesAndroidInjector(modules = [EnterPhoneModule::class])
+    internal abstract fun enterPhoneActivity(): EnterPhoneNumberActivity*/
 
     @ContributesAndroidInjector(modules = [OtpModule::class])
     internal abstract fun otpActivity(): OtpActivity
@@ -72,8 +71,7 @@ abstract class ActivityBindingModule {
     @ContributesAndroidInjector(modules = [HomeModule::class])
     internal abstract fun homeActivity(): HomeActivity
 
-    @ContributesAndroidInjector()
-    internal abstract fun splashActivity(): SplashActivity
+
 
     @ContributesAndroidInjector()
     internal abstract fun regAct(): RegTypeAct

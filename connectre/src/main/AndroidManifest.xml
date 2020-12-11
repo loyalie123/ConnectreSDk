@@ -43,23 +43,19 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity
+      <!--  <activity
             android:name="com.loyalie.connectre.ui.splash.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Splash">
 
-            <!-- &lt;!&ndash;android:theme="@style/AppTheme.Splash"&ndash;&gt;> -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            &lt;!&ndash; &lt;!&ndash;android:theme="@style/AppTheme.Splash"&ndash;&gt;> &ndash;&gt;
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.loyalie.connectre.ui.enter_phn.EnterPhoneNumberActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Transparent1" />
+            android:theme="@style/Theme.Transparent1" />-->
 
         <meta-data
             android:name="preloaded_fonts"
@@ -68,7 +64,13 @@
         <activity
             android:name="com.loyalie.connectre.ui.home.HomeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Transparent" />
+            android:theme="@style/AppTheme.Transparent" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.loyalie.connectre.ui.otp.OtpActivity"
             android:screenOrientation="portrait"

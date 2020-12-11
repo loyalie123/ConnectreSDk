@@ -154,9 +154,9 @@ class HomeActivity : BaseActivity(), View.OnClickListener, HomeEventsAdapter.OnE
                 startActivity(intent)
             }*/
 
-            R.id.logoutTV -> {
+           /* R.id.logoutTV -> {
                 LogoutDialog(this, preferenceStorage).pop()
-            }
+            }*/
 
             /*  R.id.notiIV -> {
                   NotiLeadsActivity.start(this, vendorId)
@@ -400,7 +400,7 @@ class HomeActivity : BaseActivity(), View.OnClickListener, HomeEventsAdapter.OnE
                 .putExtra("From", "Home")
             startActivity(intent)
         }
-        logoutTV.setOnClickListener(this)
+//        logoutTV.setOnClickListener(this)
         notiIV.setSafeOnClickListener {
             NotiLeadsActivity.start(this, vendorId)
             overridePendingTransition(R.anim.enter_final, R.anim.exit_final)

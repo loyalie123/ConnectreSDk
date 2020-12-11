@@ -8,7 +8,7 @@
 		android:background="@color/black"
 		android:fitsSystemWindows="true"
 		android:orientation="vertical"
-		tools:context=".ui.splash.SplashActivity">
+	>
 
 	<com.facebook.shimmer.ShimmerFrameLayout
 			android:id="@+id/edelweissShimmer"

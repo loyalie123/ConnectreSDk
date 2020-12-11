@@ -26,7 +26,7 @@ class BottomSheetAdapter(
 
     private val navTitles = arrayOf(
         "Home", "Notifications", "Feedback", "App Tutorials",
-        "Contact Us", "Privacy Policy","Referral T&C", "FAQ", "Log Out"
+        "Contact Us", "Privacy Policy","Referral T&C", "FAQ"/*, "Log Out"*/
     )
     private val navIcons = intArrayOf(
         R.drawable.ic_nav_home,
@@ -36,8 +36,8 @@ class BottomSheetAdapter(
         R.drawable.ic_nav_contact_us,
         R.drawable.ic_nav_privacy_policy,
         R.drawable.ic_nav_terms,
-        R.drawable.ic_nav_faq,
-        R.drawable.logout
+        R.drawable.ic_nav_faq/*,
+        R.drawable.logout*/
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeveloperVH {

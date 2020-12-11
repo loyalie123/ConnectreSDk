@@ -26,6 +26,7 @@ import com.loyalie.connectre.ui.change_password.ChangePhoneNoActivity
 import com.loyalie.connectre.ui.home.HomeActivity
 import com.loyalie.connectre.util.*
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_notification.*
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.app_bar_centre_title.*
 import java.io.File
@@ -162,11 +163,13 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
         val extractedColor = ConnectReApp.themeColor
         profileToolbar.setBackgroundColor(extractedColor)
         window.setStatusBarColor(Utils.darkenColor(extractedColor, 0.8f))
+
+
 //        setSupportActionBar(profileToolbar as Toolbar?)
-        profileTitleTV.text = "Profile"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_24dp)
+       profileTitleTV.text = "Profile"
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setDisplayShowTitleEnabled(false)
+//        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_24dp)
         changePhoneNoTV.setTextColor(extractedColor)
     }
 

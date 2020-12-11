@@ -1,3 +1,4 @@
+/*
 package com.loyalie.connectre.ui.enter_phn
 
 import android.content.Context
@@ -65,9 +66,11 @@ class EnterPhoneNumberActivity : BaseActivity(), GoogleApiClient.ConnectionCallb
         super.onCreate(savedInstanceState)
         overridePendingTransition(R.anim.do_not_move, R.anim.do_not_move)
 
-        /*   getWindow().setFlags(
+        */
+/*   getWindow().setFlags(
                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-               WindowManager.LayoutParams.FLAG_FULLSCREEN);*/
+               WindowManager.LayoutParams.FLAG_FULLSCREEN);*//*
+
         setContentView(R.layout.activity_enter_phone_number)
 
         if (intent.getBooleanExtra("IS_FROM_SPLASH", false)) {
@@ -112,10 +115,12 @@ class EnterPhoneNumberActivity : BaseActivity(), GoogleApiClient.ConnectionCallb
                     getString(R.string.please_enter_your_mobile_number),
                     Toast.LENGTH_LONG
                 ).show()
-                /* Toasty(this).showBelow(
+                */
+/* Toasty(this).showBelow(
                      mobileNumET,getString(R.string.please_enter_your_mobile_number)
 
-                 )*/
+                 )*//*
+
             } else if (ccode == "91" && mobileNumber.length != 10) {
 //                Toasty(this).showBelow(mobileNumET, getString(R.string.invalid_mobile))
 
@@ -340,3 +345,4 @@ class EnterPhoneNumberActivity : BaseActivity(), GoogleApiClient.ConnectionCallb
     }
 
 }
+*/

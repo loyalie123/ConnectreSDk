@@ -14,7 +14,6 @@ import com.loyalie.connectre.custom_views.LoadingDialog
 import com.loyalie.connectre.custom_views.Spinner_Adapter
 import com.loyalie.connectre.data.ViewState
 import com.loyalie.connectre.data.domainList
-import com.loyalie.connectre.ui.enter_phn.EnterPhoneNumberActivity
 import com.loyalie.connectre.util.*
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.center_title_toolbar.*
@@ -334,7 +333,7 @@ class RegisterAct : BaseActivity(), View.OnClickListener {
 
                 alertDialog.dismiss()
                 this@RegisterAct.finish()
-                EnterPhoneNumberActivity.start(this@RegisterAct, false, true, false)
+//                EnterPhoneNumberActivity.start(this@RegisterAct, false, true, false)
             }
         }
         alertDialog.setOnDismissListener { handler.removeCallbacks(runnable) }
