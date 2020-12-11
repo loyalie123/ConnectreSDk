@@ -131,5 +131,6 @@
     <string name="rsaEnc">RSA/ECB/PKCS1Padding</string>
     <string name="shared_key_name">Happiedge_shared_data</string>
     <string name="enc_name">Happiedge_encrypted78%</string>
-
+<string name="apikey_geo">AIzaSyAHCg4ut44awcjPPSlYbcdcRvY-K-35GQU</string>
+    <string name="fabric_key">519fc3710e56ba3b09696170b66f70da7ec63fd0</string>
 </resources>
