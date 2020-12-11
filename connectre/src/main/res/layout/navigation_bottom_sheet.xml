@@ -69,6 +69,7 @@
 			android:layout_marginStart="25dp"
 			android:layout_marginTop="7dp"
 			android:textColor="#802e2e2e"
+
 			android:textSize="12sp"
 			app:fontFamily="@font/sinkinsans_500medium"
 			app:layout_constraintLeft_toRightOf="@+id/profileIV"

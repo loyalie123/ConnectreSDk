@@ -232,8 +232,8 @@ class HomeActivity : BaseActivity(), View.OnClickListener, HomeEventsAdapter.OnE
         }
         preferenceStorage.userId = "12533"
         preferenceStorage.userEmail = "ribina@focaloid.com"
-        preferenceStorage.userName = "Ribina"
-        preferenceStorage.userPhone = "854738418"
+        preferenceStorage.userName = "Ribi"
+        preferenceStorage.userPhone = "8547389186"
         preferenceStorage.userType = 1
         preferenceStorage.userAvatar ="https://s3-ap-southeast-1.amazonaws.com/benefique/avatar/default.jpg"
 
