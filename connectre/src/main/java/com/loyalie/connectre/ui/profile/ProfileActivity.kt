@@ -162,7 +162,7 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
         val extractedColor = ConnectReApp.themeColor
         profileToolbar.setBackgroundColor(extractedColor)
         window.setStatusBarColor(Utils.darkenColor(extractedColor, 0.8f))
-        setSupportActionBar(profileToolbar as Toolbar?)
+//        setSupportActionBar(profileToolbar as Toolbar?)
         profileTitleTV.text = "Profile"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)

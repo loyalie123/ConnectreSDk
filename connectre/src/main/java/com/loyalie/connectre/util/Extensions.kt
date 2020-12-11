@@ -268,7 +268,7 @@ fun String.convertToddMMyyy(): String {
     return outputFormat.format(date)
 }
 fun String.capitalizeWords(): String = split(" ").map { it.capitalize() }.joinToString(" ")
-fun String.convertToddthMMyyy(): String {
+fun String.convertToddthMMyyy(): String? {
     if (isEmpty()) return ""
     val inputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
     val outputFormat = SimpleDateFormat("dd MMM, yyyy", Locale.getDefault())
@@ -285,7 +285,7 @@ fun String.convertToddthMMyyy(): String {
 
     }
 
-    return d
+    return d?:            ""
 }
 
 fun String.gethhmmaFromApiDateString(): Date {

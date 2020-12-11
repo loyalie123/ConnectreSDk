@@ -159,9 +159,9 @@ class OverViewfragmnt : BaseFragment() {
 //                    adapter1.showLoading(false)
                     titleUpcoming.text = it.data.paymentOverView.allotmentDays
                     arctv3.text =
-                        "As on " + it.data.paymentOverView.enteredDate.convertToddthMMyyy()
+                        "As on " + it.data.paymentOverView.enteredDate?.convertToddthMMyyy()
                     valueUpcoming.text = "Rs " + it.data.paymentOverView.upcomingAmount
-                    paymdueValueTv.text = it.data.paymentOverView.dueDate.convertToddMMyyy()
+                    paymdueValueTv.text = it.data.paymentOverView.dueDate?.convertToddMMyyy()
                     arctv1.text =
                         ""/*+String.format("%.2f",*/ + it.data.paymentOverView.amountPaid + "%"
                     arc.setProgress(it.data.paymentOverView.amountPaid.toFloat())

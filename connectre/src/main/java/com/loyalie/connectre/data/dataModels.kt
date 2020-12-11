@@ -523,7 +523,7 @@ data class paymentOverView(
     val towardsOutstandingInterest:Double,
     val allotmentDays: String,
     val upcomingAmount: Double,
-    val dueDate: String,   val towardsPaymentOtherCharges:Double,val enteredDate:String
+    val dueDate: String?,   val towardsPaymentOtherCharges:Double,val enteredDate:String?
 )
 
 data class greifList(
